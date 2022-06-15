@@ -1,0 +1,31 @@
+.chapter{
+    &__list{
+        margin-left: rem(10);
+    }
+    &__item{
+        font-size: rem(20);
+        line-height: 1.5;
+        font-weight: 500;
+        &:not(:first-child){
+            margin-top: rem(25);
+        }
+    }
+    &__item-elements{
+        margin-top: rem(5);
+        margin-left: rem(10);
+    }
+    &__item-element{
+       a{
+        font-size: rem(16);
+        line-height: 1.5;
+        transition: color 0.3s ease-in-out 0s;
+       }
+       &:hover{
+           a{
+               color: $redColor;
+           }
+       }
+    }
+}
+
+

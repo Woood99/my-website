@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="chapter">
+				<div class="chapter__container">
+					<h1 class="chapter__title title">Разделы</h1>
+					<ul class="chapter__list">
+						<li class="chapter__item">
+							Цели:
+							<ul class="chapter__item-elements">
+								<li class="chapter__item-element">
+									<a href="goals-2022.html">
+										2022
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="despite-everything.html">
+										#НеСмотряНиНаЧто
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="chapter__item">
+							Обучение
+							<ul class="chapter__item-elements">
+								<li class="chapter__item-element">
+									<a href="learning-javascript.html">
+										JavaScript
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-git.html">
+										Git
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-terminal.html">
+										Terminal
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-grid.html">
+										CSS Grid
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-animation.html">
+										Animation
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-other.html">
+										HTML/CSS/JS
+									</a>
+								</li>
+								<li class="chapter__item-element">
+									<a href="learning-english.html">
+										English
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение Animation"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="learn">
+                <div class="learn__container">
+                    <h2 class="learn__title title">
+                        Обучение Animation
+                    </h2>
+                    <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                CSS transition
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        <a href="https://fls.guru/csstransition.html"
+                                            style="color: #367de7; text-decoration: underline; font-size: 20px;"
+                                            onmouseover="this.style.color='#df4848';"
+                                            onmouseout="this.style.color='#367de7';">
+                                            CSS переходы (CSS transition) // «Фрилансер по жизни»
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <span class="remember">Запомнить!</span>
+                                        Использование transition только на hover - при наведении работает, но если
+                                        убрать
+                                        оно работать не будет.
+                                    </p>
+                                    <ul class="table-secondary">
+                                        <li class="table-secondary__title">
+                                            <span>transition на button</span>
+                                            <span>transition на hover</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <button type="submit"
+                                                    class="learn-transition--test1 learn-transition--test1-one">
+                                                    Кнопка
+                                                </button>
+                                                <pre style="text-align: left; margin-top: 15px; font-style: normal;"><code><span class="green">button</span> {
+    background-color: <span class="blue">green</span>;
+    color: <span class="blue">white</span>;
+    padding: <span class="blue">15px 60px</span>;
+    border-radius: <span class="blue">10px</span>;
+    font-size: <span class="blue">16px</span>;
+    line-height: <span class="blue">100%</span>;
+    transition: <span class="blue">background-color 0.5s ease-in-out</span>;
+}
+
+<span class="green">button:hover</span>{
+    background-color: <span class="blue">blue</span>;
+}</code></pre>
+                                            </div>
+                                            <div>
+                                                <button type="submit"
+                                                    class="learn-transition--test1 learn-transition--test1-two">
+                                                    Кнопка
+                                                </button>
+                                                <pre style="text-align: left; margin-top: 15px; font-style: normal;"><code><span class="green">button</span> {
+    background-color: <span class="blue">green</span>;
+    color: <span class="blue">white</span>;
+    padding: <span class="blue">15px 60px</span>;
+    border-radius: <span class="blue">10px</span>;
+    font-size: <span class="blue">16px</span>;
+    line-height: <span class="blue">100%</span>;
+}
+
+<span class="green">button:hover</span>{
+    transition: <span class="blue">background-color 0.5s ease-in-out</span>;
+    background-color: <span class="blue">blue</span>;
+}</code></pre>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="table-secondary">
+                                        <li class="table-secondary__title">
+                                            <span>button:3s // hover:0.3s</span>
+                                            <span>button:0.3s // hover:3s</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <button type="submit"
+                                                    class="learn-transition--test1 learn-transition--test1-three">
+                                                    Кнопка
+                                                </button>
+                                                <pre style="text-align: left; margin-top: 15px; font-style: normal;"><code><span class="green">button</span> {
+    background-color: <span class="blue">green</span>;
+    color: <span class="blue">white</span>;
+    padding: <span class="blue">15px 60px</span>;
+    border-radius: <span class="blue">10px</span>;
+    font-size: <span class="blue">16px</span>;
+    line-height: <span class="blue">100%</span>;
+    transition: <span class="blue">background-color 3s ease-in-out</span>;
+}
+
+<span class="green">button:hover</span>{
+    transition: <span class="blue">background-color 0.3s ease-in-out</span>;
+    background-color: <span class="blue">blue</span>;
+}</code></pre>
+                                            </div>
+                                            <div>
+                                                <button type="submit"
+                                                    class="learn-transition--test1 learn-transition--test1-four">
+                                                    Кнопка
+                                                </button>
+                                                <pre style="text-align: left; margin-top: 15px; font-style: normal;"><code><span class="green">button</span> {
+    background-color: <span class="blue">green</span>;
+    color: <span class="blue">white</span>;
+    padding: <span class="blue">15px 60px</span>;
+    border-radius: <span class="blue">10px</span>;
+    font-size: <span class="blue">16px</span>;
+    line-height: <span class="blue">100%</span>;
+    transition: <span class="blue">background-color 0.3s ease-in-out</span>;
+}
+
+<span class="green">button:hover</span>{
+    transition: <span class="blue">background-color 3s ease-in-out</span>;
+    background-color: <span class="blue">blue</span>;
+}</code></pre>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                CSS animation
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <a href="https://fls.guru/cssanimation.html"
+                                        style="color: #367de7; text-decoration: underline; font-size: 20px;"
+                                        onmouseover="this.style.color='#df4848';"
+                                        onmouseout="this.style.color='#367de7';">
+                                        CSS анимация (CSS animation & @keyframes) // «Фрилансер по жизни»
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->

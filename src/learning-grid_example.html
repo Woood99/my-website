@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение Grid - example"
+})
+<style>
+    .item {
+        padding: 20px;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        grid-gap: 20px;
+    }
+    h2{
+        font-size: 22px !important;
+        line-height: 30px !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="learn">
+                <div class="learn__container">
+                    <h2 class="learn__title title">
+                        Обучение Grid - example
+                    </h2>
+                    <h2>auto-fill</h2>
+                    <div class="container">
+                        <div class="item item-1" style="background: #1abc9c">item-1</div>
+                        <div class="item item-2" style="background: #2ecc71">item-2</div>
+                        <div class="item item-3" style="background: #3498db">item-3</div>
+                        <div class="item item-4" style="background: #9b59b6">item-4</div>
+                        <div class="item item-5" style="background: #34495e ">item-5</div>
+                        <div class="item item-6" style="background: #f1c40f">item-6</div>
+                        <div class="item item-7" style="background: #e67e22">item-7</div>
+                        <div class="item item-8" style="background: #e74c3c">item-8</div>
+                    </div>
+                
+                    <br><br><br><br><br><br><br><br>
+                
+                    <h2>auto-fit</h2>
+                    <div class="container2">
+                        <div class="item item-1" style="background: #1abc9c">item-1</div>
+                        <div class="item item-2" style="background: #2ecc71">item-2</div>
+                        <div class="item item-3" style="background: #3498db">item-3</div>
+                        <div class="item item-4" style="background: #9b59b6">item-4</div>
+                        <div class="item item-5" style="background: #34495e ">item-5</div>
+                        <div class="item item-6" style="background: #f1c40f">item-6</div>
+                        <div class="item item-7" style="background: #e67e22">item-7</div>
+                        <div class="item item-8" style="background: #e74c3c">item-8</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

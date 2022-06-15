@@ -1,0 +1,152 @@
+.accordion-first {
+	&__title {
+		cursor: pointer;
+		padding-right: rem(20);
+		background-color: $mainColor
+	}
+
+
+	&__list._spoller-init &__title::after {
+		content: "";
+		position: absolute;
+		background-image: url('@img/arrow.svg');
+		background-repeat: no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		width: rem(10);
+		height: rem(5);
+		background-size: cover;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&__list._spoller-init &__title._spoller-active::after {
+		transform: rotate(180deg);
+	}
+
+	&__content {
+		position: absolute;
+		top: 160%;
+		right: rem(-10);
+		min-width: rem(200);
+		background-color: $mainColor;
+		color: $whiteColor;
+		border-bottom-left-radius: rem(5);
+		border-bottom-right-radius: rem(5);
+        z-index: 99;
+	}
+}
+
+.accordion-secondary {
+    &__item:not(:last-child) {
+        margin-bottom: rem(10);
+    }
+
+    &__title {
+        width: 100%;
+        text-align: left;
+        font-size: rem(18);
+        color: $whiteColor;
+        padding: rem(10);
+        position: relative;
+    }
+
+    &__list._spoller-init &__title {
+        cursor: pointer;
+        padding: rem(10) rem(40) rem(10) rem(10);
+        background-color: $mainColor;
+    }
+
+    &__list._spoller-init &__title::before,
+    &__list._spoller-init &__title::after {
+        content: '';
+        width: rem(20);
+        height: rem(1);
+        background-color: $whiteColor;
+        position: absolute;
+        right: rem(10);
+        top: rem(20);
+        transition: transform 0.3s ease 0s;
+    }
+
+    &__list._spoller-init &__title::after {
+        transform: rotate(-90deg);
+    }
+
+    &__list._spoller-init &__title._spoller-active::after {
+        transform: rotate(0deg);
+    }
+
+    &__content {
+        color: $mainColor;
+        font-size: rem(14);
+        line-height: 1.3;
+        padding: rem(10) rem(15);
+        border: rem(1) solid $mainColor;
+        border-bottom-left-radius: rem(5);
+        border-bottom-right-radius: rem(5);
+        @media (max-width:$tablet){
+            padding: rem(10) rem(12);
+        }
+        @media (max-width:$mobile){
+            padding: rem(8) rem(8);
+        }
+    }
+}
+
+.accordion-secondary-two {
+    &__item:not(:last-child) {
+        margin-bottom: rem(10);
+    }
+
+    &__title {
+        width: 100%;
+        text-align: left;
+        font-size: rem(18);
+        color: $whiteColor;
+        padding: rem(10);
+        position: relative;
+    }
+
+    &__list._spoller-init &__title {
+        cursor: pointer;
+        padding: rem(10) rem(40) rem(10) rem(10);
+        background-color: $blueColor;
+    }
+
+    &__list._spoller-init &__title::before,
+    &__list._spoller-init &__title::after {
+        content: '';
+        width: rem(20);
+        height: rem(1);
+        background-color: $whiteColor;
+        position: absolute;
+        right: rem(10);
+        top: rem(20);
+        transition: transform 0.3s ease 0s;
+    }
+
+    &__list._spoller-init &__title::after {
+        transform: rotate(-90deg);
+    }
+
+    &__list._spoller-init &__title._spoller-active::after {
+        transform: rotate(0deg);
+    }
+
+    &__content {
+        color: $mainColor;
+        font-size: rem(14);
+        line-height: 1.3;
+        padding: rem(10) rem(15);
+        border: rem(1) solid $blueColor;
+        border-bottom-left-radius: rem(5);
+        border-bottom-right-radius: rem(5);
+        @media (max-width:$tablet){
+            padding: rem(10) rem(12);
+        }
+        @media (max-width:$mobile){
+            padding: rem(8) rem(8);
+        }
+    }
+}

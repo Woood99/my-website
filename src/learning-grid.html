@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение Grid"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="learn">
+                <div class="learn__container">
+                    <h2 class="learn__title title">
+                        Обучение Grid
+                    </h2>
+                    <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Теория
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <h5 class="h5-title">CSS Grid</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>
+                                            Новый модуль CSS для работы с лейаутом.
+                                        </li>
+                                        <li>
+                                            Не замена flexbox.
+                                        </li>
+                                        <li>
+                                            По работе напоминает таблицы.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Колонка и строка</h5>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-1.jpg" alt="img-1">
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Линия</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>
+                                            Линии образующие сетку
+                                        </li>
+                                        <li>
+                                            Бывают вертикальные и горизонтальные
+                                        </li>
+                                    </ul>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-2.jpg" alt="img-2">
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Трек</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>
+                                            Расстояние между двумя линиями
+                                        </li>
+                                        <li>
+                                            Бывают вертикальный и горизонтальный
+                                        </li>
+                                    </ul>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-3.jpg" alt="img-3">
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Ячейка</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>Расстояние между четырьмя линиями</li>
+                                        <li>
+                                            На примере: <br>
+                                            Строчные линии: 3 и 4 <br>
+                                            Колоночные: 2 и 3
+                                        </li>
+                                    </ul>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-4.jpg" alt="img-4">
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Область</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>Расстояние между четырьмя линиями</li>
+                                        <li>
+                                            Объединяет ячейки
+                                        </li>
+                                        <li>
+                                            На примере: <br>
+                                            Строчные линии: 2 и 4 <br>
+                                            Колоночные: 3 и 6
+                                        </li>
+                                    </ul>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-5.jpg" alt="img-5">
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="h5-title">Промежуток</h5>
+                                    <ul class="grid-column-1 ul-arrows-right">
+                                        <li>Расстояние между ячейками</li>
+                                    </ul>
+                                    <p class="max-w-300">
+                                        <img src="@img/grid/image-6.jpg" alt="img-6">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Строки и колонки
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <div>
+                                        <span class="fw700">grid-template-columns</span>
+                                        - создаёт колонки.
+                                    </div>
+                                    <div>
+                                        <span class="fw700">grid-template-rows</span>
+                                        - создаёт строки.
+                                    </div>
+                                    <div>
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">200px 300px 200px</span>;
+    grid-template-rows: <span class="blue">300px 200px 100px</span>;
+}</code></pre>
+                                    </div>
+                                    <div>
+                                        <span class="fw700">В данном случае сетка состоит из:</span> <br>
+                                        3 колонки (200px 300px 200px), <br>
+                                        3 строки (300px 200px 100px). <br>
+                                        Если элементов больше, и 3 строк не хватает, то
+                                        остальные элементы будут занимать столько, сколько требует содержимое.
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">grid-gap</h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-row-gap</span>
+                                        задает разрыв между рядами.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-column-gap</span>
+                                        задает разрыв между колонками.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-gap: row column</span>
+                                        задает разрыв для рядов и колонок разом.
+                                        <br>
+                                        Если указать один параметр он будет выставлен для обоих значений.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        grid-auto-flow
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-auto-flow: row/column;
+                                        </span>
+                                        отвечает за направление контента.
+                                    </p>
+                                    <p>
+                                        По умолчанию со значением row: размещать элементы, заполняя поочерёдно каждую
+                                        строку и добавляя новые строки по мере необходимости.
+                                    </p>
+                                    <p>
+                                        Значение column: контент выстроится в направлении колонок сверху вниз. Элементы
+                                        теперь будут размещаться, заполняя поочерёдно каждый столбец и добавляя новые
+                                        столбцы по мере необходимости.
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="gridAutoFlow">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">300px</span>;
+    grid-template-columns: <span class="blue">repeat(4, 1fr)</span>;
+    grid-template-rows: <span class="blue">repeat(4, 1fr)</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">row</button>
+                                            <button class="action-buttons__btn">column</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, 1fr); grid-template-rows:repeat(4, 1fr); height: 300px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        Неявная сетка
+                                    </h4>
+                                    <p>
+                                        <span class="fw700">Явная сетка -</span>
+                                        это та сетка, которая обозначена свойствами
+                                        grid-template-columns и grid-template-rows.
+                                    </p>
+                                    <p>
+                                        <span class="fw700">Неявная сетка -</span>
+                                        прочие ряды и колонки, которые созданы автоматически, поскольку контент не
+                                        поместился в явную сетку.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-auto-columns/grid-auto-rows:
+                                        </span>
+                                        px/%...
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="gridAutoRows">
+                                        <h4 class="font-h4">grid-auto-rows</h4>
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">repeat(3, 100px)</span>;
+    grid-template-rows: <span class="blue">repeat(2, 100px)</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">150px</button>
+                                            <button class="action-buttons__btn">250px</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(3, 100px); grid-template-rows:repeat(2, 100px);">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="gridAutoColumns">
+                                        <h4 class="font-h4">grid-auto-columns</h4>
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">repeat(3, 100px)</span>;
+    grid-template-rows: <span class="blue">repeat(2, 100px)</span>;
+    grid-auto-flow: <span class="blue">column</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">150px</button>
+                                            <button class="action-buttons__btn">250px</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(3, 100px); grid-template-rows:repeat(2, 100px); grid-auto-flow: column;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Управление ячейками
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        Допустим нужно расположить 5-элемент после 2-элемента.
+                                    </p>
+                                    <p>
+                                        Для этого нужно указать между каких линий он должен располагаться двумя
+                                        свойствами:
+                                    </p>
+                                    <div>
+                                        <ul class="grid-column-1">
+                                            <li class="fw700">
+                                                grid-column: start / end;
+                                            </li>
+                                            <li class="fw700">
+                                                grid-row: start / end;
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">25% 25% 25% 25%</span>;
+    grid-template-rows: <span class="blue">300px 200px 100px</span>;
+}
+
+<span class="green">.item-5</span> {
+    grid-column: <span class="blue">3 / 4</span>;
+    grid-row: <span class="blue">1 / 2</span>;
+}</code></pre>
+                                    <p>
+                                        <span class="remember">Запомнить!</span>
+                                        Элементы при одинаковом расположении перекрывают друг друга, элемент который
+                                        ниже в коде
+                                        - более приоритетнее (z-index).
+                                    </p>
+                                    <p>
+                                        <span class="remember">Запомнить!</span>
+                                        Ячейку можно расстянуть на весь ряд, для этого нужно в качестве параметра end
+                                        указать -1.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Элементы так-же можно расстягивать между больше кол-во линий:
+                                    </p>
+                                    <pre><code><span class="green">.item-5</span> {
+    grid-column: <span class="blue">2 / 5</span>;
+    grid-row: <span class="blue">1 / 3</span>;
+}</code></pre>
+                                    <p>
+                                        Теперь элемент располагается между:
+                                        2 / 5 и 1 / 3 линиями
+                                    </p>
+                                    <p>
+                                        <span class="remember">Запомнить!</span>
+                                        Если расположить элемент между линий которых не существует,
+                                        то элемент всё равно становится на эти линии и создаёт столько grid-track,
+                                        сколько ему необходимо
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">span</h4>
+                                    <p>
+                                        <span class="fw700">span</span>
+                                        - растянуть.
+                                        Текущий элемент будет растягиваться на указанное число рядов/колонок
+                                    </p>
+                                    <pre><code><span class="green">.item-5</span> {                                                                                
+    grid-column: <span class="blue">1 / 2 span</span>;   откуда колонка будет начинатся / на сколько будет увеличиваться
+    grid-row: <span class="blue">1 / span 2</span>;      откуда строка будет начинатся / на сколько будет увеличиваться
+}</code></pre>
+                                    <pre><code><span class="green">.item-5</span> {                                                                                
+    grid-column: <span class="blue">span 3</span>;   будет увеличина на 3, с места где он сейчас находится
+    grid-row: <span class="blue">span 2</span>;      будет увеличина на 2, с места где он сейчас находится
+}</code></pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Фракции
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <p>
+                                    <span class="fw700">Фракция</span>
+                                    - специальная единица измерения CSS Grid для создания адаптивного макета.
+                                    Фракция — это часть целого.
+                                </p>
+                                <div>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-template-columns: 1fr 1fr 1fr;</span>
+                                        вся доступная ширина разделилится на 3 части и каждая колонка займет одну из
+                                        этих частей.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-template-columns: 2fr 1fr 1fr;</span>
+                                        доступная ширина поделится на 4 части, первая колонка займет две части, а
+                                        остальные колонки — по одной части.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">grid-template-columns: 200px 1fr 1fr;</span>
+                                        первая колонка займет фиксированную ширину в 200px, а две другие будут делить
+                                        оставшееся пространство между собой поровну. При изменении ширины экрана, первая
+                                        колонка будет также занимать 200px, а ширина колонок, заданная во фракциях,
+                                        будет пересчитываться.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Если у grid-контейнера не задана высота, то фракция считается по высоте самого
+                                        большого элемента внутри grid-track (grid-template-rows).
+                                    </p>
+                                    <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">1fr 1fr 1fr</span>;
+    grid-template-rows: <span class="blue">1fr 2fr 5fr 2fr</span>;
+}</code></pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Вспомогательные функции
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <h4 class="font-h4">repeat()</h4>
+                                    <p>
+                                        <span class="fw700">repeat()</span>
+                                        - позволяет задавать количество и размер колонок без повторений в коде.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                                        </span>
+                                        ==
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: repeat(4, 1fr);
+                                        </span>
+                                        - первое значение — число колонок, второе — ширина каждой колонки.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: 50px 200px 50px 200px;
+                                        </span>
+                                        ==
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: repeat(2, 50px 200px);
+                                        </span>
+                                        - размеры указаны через пробел без запятой. Означает: повторить 2 раза
+                                        комбинацию
+                                        колонок шириной 50 и 200px
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">minmax()</h4>
+                                    <p>
+                                        <span class="fw700">minmax()</span>
+                                        - минимальная и максимальная ширина/высота
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: minmax(100px, 500px) 100px 100px 100px;
+                                        </span>
+                                        первая колонка резиновая, а остальные с фиксированным размером. При
+                                        достижении минимального размера, колонка перестает уменьшаться.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">min-content</h4>
+                                    <p>
+                                        <span class="fw700">min-content</span>
+                                        - наименьший размер, при котором ячейка не переполняется.
+                                        Для текста это ширина самого длинного слова или неразрывного фрагмента.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: 1fr min-content 1fr 1fr;
+                                        </span>
+                                        Вторая колонка занимает минимум по контенту (на сколько это возможно), а
+                                        остальные по 1fr.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">max-content</h4>
+                                    <p>
+                                        <span class="fw700">max-content</span>
+                                        - наибольший размер контента.
+                                        Для текста это длина самой большой строки без переносов.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: 1fr max-content 1fr 1fr;
+                                        </span>
+                                        Вторая колонка занимает максимум по контенту (на сколько это возможно), а
+                                        остальные по 1fr.
+                                    </p>
+                                </div>
+                                <div>
+                                    <pre><code><span class="green">.box1</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">1fr minmax(min-content, 1fr) 1fr 1fr</span>;
+}</code></pre>
+                                    <pre><code><span class="green">.box2</span> {
+    display: <span class="blue">grid</span>;
+    grid-template-columns: <span class="blue">1fr minmax(min-content, max-content) 1fr 1fr</span>;
+}</code></pre>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">fit-content( max )</h4>
+                                    <p>
+                                        <span class="fw700">fit-content( max )</span>
+                                        - если контент меньше этого размера, ведет себя как auto, если больше, то
+                                        ограничивает размер ряда/колонки до указанного в параметре max.
+                                        <br>
+                                        (ограничивает размер ряда/колонки до указанного в параметре max.
+                                        Но при этом если ему не хватает места, он уменьшается)
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            grid-template-columns: 1fr fit-content(300px) 1fr 1fr;
+                                        </span>
+                                        Вторая колонка может занимать максимум 300px, и так-же уменьшатся
+                                        если это необходимо.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Именованные линии
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        В Grid можно дать наименование каждой линии грида,
+                                        присвоив ей какое-либо имя в квадратных скобках и затем,
+                                        используя это имя, позиционировать элементы.
+                                    </p>
+                                    <p>
+                                        Например, создадим стандартный шаблон для сайта: <br>
+                                        header, 2 sidebar, main, footer.
+                                    </p>
+                                </div>
+                                <div>
+                                    <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">600px</span>;
+    grid-template-columns: <span class="blue">
+        [l-sidebar-s] 1fr 1fr 1fr [l-sidebar-e] 
+        1fr 1fr 1fr 1fr 1fr 1fr 
+        [r-sidebar-s] 1fr 1fr 1fr [r-sidebar-e]</span>;
+    grid-template-rows: <span class="blue">
+        [header-s] 80px [header-e] 
+        1fr 
+        [footer-s] 100px [footer-e]</span>;
+    grid-gap: <span class="blue">5px</span>;
+}
+
+<span class="green">.item-1</span> {
+    grid-column: <span class="blue">l-sidebar-s / r-sidebar-e</span>;
+    grid-row: <span class="blue">header-s / header-e</span>;
+}
+
+<span class="green">.item-2</span> {
+    grid-column: <span class="blue">l-sidebar-s / l-sidebar-e</span>;
+    grid-row: <span class="blue">header-e / footer-s</span>;
+}
+
+<span class="green">.item-3</span> {
+    grid-column: <span class="blue">l-sidebar-e / r-sidebar-s</span>;
+    grid-row: <span class="blue">header-e / footer-s</span>;
+}
+
+<span class="green">.item-4</span> {
+    grid-column: <span class="blue">r-sidebar-s / r-sidebar-e</span>;
+    grid-row: <span class="blue">header-e / footer-s</span>;
+}
+
+<span class="green">.item-5</span> {
+    grid-column: <span class="blue">l-sidebar-s / r-sidebar-e</span>;
+    grid-row: <span class="blue">footer-s / footer-e</span>;
+}</code></pre>
+                                </div>
+                                <div>
+                                    <p class="font-h4">Результат:</p>
+                                    <div class="grid-template__box">
+                                        <div class="grid-template__item grid-template__item-1"
+                                            style="background: #1abc9c">item 1</div>
+                                        <div class="grid-template__item grid-template__item-2"
+                                            style="background: #2ecc71">item 2</div>
+                                        <div class="grid-template__item grid-template__item-3"
+                                            style="background: #3498db">item 3</div>
+                                        <div class="grid-template__item grid-template__item-4"
+                                            style="background: #9b59b6">item 4</div>
+                                        <div class="grid-template__item grid-template__item-5"
+                                            style="background: #34495e">item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Области сетки Grid Areas
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        <span class="fw700">grid-template-areas:</span>
+                                        позволяет создать визуальный шаблон сетки. В этом свойстве задаются имена
+                                        ячейкам, а затем элементы привязываются к этим именам через свойство grid-area:
+                                        указываемое для отдельного элемента.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Например, создадим стандартный шаблон для сайта: <br>
+                                        header, 2 sidebar, main, footer.
+                                    </p>
+                                    <div>
+                                        <pre><code><span class="green">.box</span> {
+        display: <span class="blue">grid</span>;
+        height: <span class="blue">600px</span>;
+        grid-template-columns: <span class="blue">repeat(12, 1fr)</span>;
+        grid-template-rows: <span class="blue">80px 1fr 100px</span>;
+        grid-gap: <span class="blue">5px</span>;
+        grid-template-areas: <span class="blue">
+            "header header header header header header header header header header header header"
+            "left left left main main main main main main right right right"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"</span>;
+    }
+    
+    <span class="green">.item-1</span> {
+        grid-area: <span class="blue">header</span>;
+    }
+
+    <span class="green">.item-2</span> {
+        grid-area: <span class="blue">footer</span>;
+    }
+
+    <span class="green">.item-3</span> {
+        grid-area: <span class="blue">main</span>;
+    }
+
+    <span class="green">.item-</span> {
+        grid-area: <span class="blue">left</span>;
+    }
+    
+    <span class="green">.item-5</span> {
+        grid-area: <span class="blue">right</span>;
+    }
+
+    <span class="green">@media (max-width: 1000px) </span> {
+        <span class="green">.box</span> {
+            grid-template-areas: <span class="blue">
+                "footer footer footer footer footer footer footer footer footer footer footer footer"
+                "main main main main main main right right right left left left"
+                "header header header header header header header header header header header header";</span>
+        }
+    }</code></pre>
+                                    </div>
+                                    <div>
+                                        <p class="font-h4">Результат:</p>
+                                        <div class="grid-template-2__box">
+                                            <div class="grid-template-2__item grid-template-2__item-1"
+                                                style="background: #1abc9c">item 1</div>
+                                            <div class="grid-template-2__item grid-template-2__item-2"
+                                                style="background: #2ecc71">item 2</div>
+                                            <div class="grid-template-2__item grid-template-2__item-3"
+                                                style="background: #3498db">item 3</div>
+                                            <div class="grid-template-2__item grid-template-2__item-4"
+                                                style="background: #9b59b6">item 4</div>
+                                            <div class="grid-template-2__item grid-template-2__item-5"
+                                                style="background: #34495e">item 5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-h4">Ограничения при работе с Grid Areas</p>
+                                    <ol class="grid-column-1">
+                                        <li>
+                                            Каждая ячейка должна быть проименована.
+                                        </li>
+                                        <li>
+                                            Если ячейку надо пропустить (не надо её использовать) используется точка
+                                            «.».
+                                        </li>
+                                        <li>
+                                            Ячейка должна быть строго прямоугольная или квадратная.
+                                        </li>
+                                        <li>
+                                            Область должна быть цельная, нельзя разрывать область.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Выравнивание ячеек
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <h4 class="font-h4">
+                                        justify-items
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            justify-items: stretch/start/center/end;
+                                        </span>
+                                        выравнивает элементы по горизонтали ←→
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="justifyItems">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, 1fr)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, 1fr); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        align-items
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            align-items: stretch/start/center/end;
+                                        </span>
+                                        выравнивает элементы по вертикали ↓↑
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="alignItems">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, 1fr)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, 1fr); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        justify-self
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            justify-self: stretch/start/center/end;
+                                        </span>
+                                        выравнивает элемент внутри ячейки по горизонтали ←→
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="item"
+                                        data-action-buttons="justifySelf">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, 1fr)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, 1fr); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        align-self
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            align-self: stretch/start/center/end;
+                                        </span>
+                                        выравнивает элемент внутри ячейки по вертикали ↓↑
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="item"
+                                        data-action-buttons="alignSelf">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, 1fr)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, 1fr); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        justify-content
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            justify-content: stretch/start/center/end/space-evenly/space-between;
+                                        </span>
+                                        выравнивает колонки по горизонтали ←→
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="justifyContent">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, min-content)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                            <button class="action-buttons__btn">space-around</button>
+                                            <button class="action-buttons__btn">space-evenly</button>
+                                            <button class="action-buttons__btn">space-between</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, min-content); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        align-content
+                                    </h4>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            align-content: stretch/start/center/end/space-evenly/space-between;
+                                        </span>
+                                        выравнивает ряды по вертикали ↓↑
+                                    </p>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="alignContent">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    height: <span class="blue">200px</span>;
+    grid-template-columns: <span class="blue">repeat(4, min-content)</span>;
+    grid-column-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">stretch</button>
+                                            <button class="action-buttons__btn">start</button>
+                                            <button class="action-buttons__btn">center</button>
+                                            <button class="action-buttons__btn">end</button>
+                                            <button class="action-buttons__btn">space-around</button>
+                                            <button class="action-buttons__btn">space-evenly</button>
+                                            <button class="action-buttons__btn">space-between</button>
+                                        </div>
+                                        <div class="action-buttons__result"
+                                            style="display: grid; grid-template-columns:repeat(4, min-content); grid-column-gap: 25px; height: 200px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">
+                                Grid - Автоперенос контента: auto-fill и auto-fit
+                            </button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        Избежать горизонтальный скролл и сделать, чтобы элементы переносились на новую
+                                        строку с нужной шириной колонок помогут функции minmax() и repeat() и свойства
+                                        auto-fill и auto-fit
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            auto-fill
+                                        </span>
+                                        стремится поместить в строку как можно больше ячеек.
+                                        Это свойство предпочитает использовать минимальную ширину для ячейки, даже если
+                                        есть свободное место.
+                                    </p>
+                                    <p>
+                                        <span class="code-bg_light-blue">
+                                            auto-fit
+                                        </span>
+                                        стремится занять всё доступное пространство в строке и подстраивает ширину ячеек
+                                        под это пространство.
+                                    </p>
+                                    <p>
+                                        В обоих случаях происходит перенос ячеек на новую строчку, количество колонок
+                                        подстраивается под размер сетки.
+                                        <br>
+                                        Но при наличии свободного пространства auto-fill использует минимальную ширину
+                                        колонки.
+                                        <br>
+                                        А auto-fit подстраивает ширину под свободное место.
+                                        <br>
+                                        Такое поведение мы
+                                        наблюдаем, когда свободного пространства много и очевидна разница в работе этих
+                                        свойств. В том случае, если пространства недостаточно и происходит перенос на
+                                        новую строку, разница в работе свойств становится незаметной.
+                                    </p>
+                                    <a href="learning-grid_example.html"
+                                        style="color: #367de7; text-decoration: underline;"
+                                        onmouseover="this.style.color='#df4848';"
+                                        onmouseout="this.style.color='#367de7';">Страница с auto-fill и auto-fit</a>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        auto-fill
+                                    </h4>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="gridTemplateColumns">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">repeat(auto-fill, 200px)</button>
+                                            <button class="action-buttons__btn">repeat(auto-fill,
+                                                minmax(70px,1fr))</button>
+                                        </div>
+                                        <div class="action-buttons__result" style="display: grid; grid-gap: 25px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">
+                                        auto-fit
+                                    </h4>
+                                    <div class="ligth-blue-bg action-buttons" data-action-buttons-type="container"
+                                        data-action-buttons="gridTemplateColumns">
+                                        <pre><code><span class="green">.box</span> {
+    display: <span class="blue">grid</span>;
+    grid-gap: <span class="blue">25px</span>;
+}</code></pre>
+                                        <div class="action-buttons__btns">
+                                            <button class="action-buttons__btn"
+                                                data-action-buttons="default">repeat(auto-fit, 200px)</button>
+                                            <button class="action-buttons__btn">repeat(auto-fit,
+                                                minmax(70px,1fr))</button>
+                                        </div>
+                                        <div class="action-buttons__result" style="display: grid; grid-gap: 25px;">
+                                            <div style="background: #1abc9c">item-1</div>
+                                            <div style="background: #2ecc71">item-2</div>
+                                            <div style="background: #3498db">item-3</div>
+                                            <div style="background: #9b59b6">item-4</div>
+                                            <div style="background: #34495e">item-5</div>
+                                            <div style="background: #f1c40f">item-6</div>
+                                            <div style="background: #e67e22">item-7</div>
+                                            <div style="background: #e74c3c">item-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->

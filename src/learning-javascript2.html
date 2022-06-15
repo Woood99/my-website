@@ -1,0 +1,4060 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение JavaScript"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="learn">
+				<div class="learn__container">
+					<h2 class="learn__title title">
+						Обучение JavaScript
+					</h2>
+					<div data-tabs class="tabs learn__tabs learn-tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="submit" class="tabs__title _tab-active">Модуль 1</button>
+							<button type="submit" class="tabs__title">Модуль 2</button>
+							<button type="submit" class="tabs__title">Модуль 3</button>
+							<button type="submit" class="tabs__title">Модуль 4</button>
+							<button type="submit" class="tabs__title">Модуль 5</button>
+							<button type="submit" class="tabs__title">Модуль 6</button>
+							<button type="submit" class="tabs__title">Модуль 7</button>
+							<button type="submit" class="tabs__title">Модуль 8</button>
+							<button type="submit" class="tabs__title">Модуль 9</button>
+							<button type="submit" class="tabs__title">Модуль 10</button>
+							<button type="submit" class="tabs__title">Модуль 11</button>
+							<button type="submit" class="tabs__title">js 2.0</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body js-module-1">
+
+
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Предыстория
+											программирования</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Когда компьютеры только начали появляться человеку приходилось
+													писать
+													машинный код состоящий из 0 и 1. Со временем это стало неудобно,
+													так-как
+													легко ошибится.
+												</p>
+												<p>
+													Решением проблемы стали языки программирования которые позволяли
+													писать
+													код человеку, но разумется такой код уже не был понятен компьютеру.
+													Для перевода с человеческого на компьютерный требовался переводчик.
+												</p>
+												<p>
+													Эти переводчики бывают двух видов -
+													<span class="fw700">"Компиляторы"</span>
+													и
+													<span class="fw700">"Интерпретаторы"</span>.
+												</p>
+												<p>
+													<span class="fw700">
+														Компиляторы
+													</span>
+													- занимаются только переводом. (берут код и перегоняет в машинный
+													код).
+													(C++, Java..)
+												</p>
+												<p>
+													<span class="fw700">
+														Интерпретаторы
+													</span>
+													- сразу запускают (берут код как есть и запускают его). (Python,
+													PHP,
+													JavaScript)
+												</p>
+											</div>
+											<p>
+												<span class="remember">
+													Запомнить!
+												</span>
+												Java и JavaScript - Совершенно разные языки.
+											</p>
+											<div>
+												<h4 class="font-h4">
+													Области применения JavaScript
+												</h4>
+												<ol>
+													<li>
+														Web-разработка (программы, которые выполняются в браузере, когда
+														мы загружаем страницу).
+													</li>
+													<li>
+														Десктопные приложения (программы, которые запускаются в ОС) -
+														Discord, VS, Slack, WhatsApp.
+													</li>
+													<li>
+														Мобильные приложения (Приложения для Android и iOS) - Facebook,
+														Instagram.
+													</li>
+													<li>
+														Серверные приложения.
+													</li>
+													<li>
+														Инструменты разработчика.
+													</li>
+													<li>
+														Приложения для "умных" телевизоров
+													</li>
+												</ol>
+											</div>
+											<div>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													JavaScript незаменим в браузере (браузеры умеют выполнять только
+													JavaScript код)
+												</p>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													На JavaScript пишут изоморфные приложения. (один и тот же код
+													используется для нескольких платформ),
+													(одна и та-же программа может работать и в браузере, десктопе и
+													мобильное приложение) - Discrord, Trella, Slack
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+
+							</div>
+							<div class="tabs__body js-module-2">
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Переменные</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">
+														let
+													</span>
+													– это современный способ объявления.
+												</p>
+												<p>
+													<span class="fw700">
+														var
+													</span>
+													– это устаревший способ объявления.
+												</p>
+												<p>
+													<span class="fw700">
+														const
+													</span>
+													– похоже на let, но значение переменной не может изменяться.
+												</p>
+											</div>
+
+											<div>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													Переменная может быть объявлена только один раз.
+													Повторное объявление той же переменной является ошибкой.
+													Поэтому следует объявлять переменную только один раз и затем
+													использовать её уже без let
+												</p>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													Имя переменной должно содержать только буквы, цифры или символы $ и
+													_.
+													Первый символ не должен быть цифрой.
+												</p>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													Переменные, объявленные с помощью const, называются «константами».
+													Их
+													нельзя изменить. Попытка сделать это приведёт к ошибке.
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Математические
+											операции</button>
+										<div class="accordion-secondary__content">
+											<p>
+												Для вычисления остатка используется знак "%"
+												<br><img src="@img/js/module-2/image-1.png" alt="">
+											</p>
+											<p>
+												<span class="remember">
+													Запомнить!
+												</span>
+												Оператор вычисления остатка имеет такой-же приоритет как и умножение или
+												деление
+											</p>
+											<div>
+												<p>
+													<span class="fw700">Инкремент</span> увеличивает переменную на 1
+													(++)
+												</p>
+												<p>
+													<span class="fw700">Декремент</span> уменьшает переменную на 1 (--)
+												</p>
+												<p>
+													<img src="@img/js/module-2/image-5.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="fw700">Постфиксная форма</span> - это когда оператор
+													идёт после переменной (counter++)
+												</p>
+												<p>
+													<span class="fw700">Префиксная форма</span> — это когда оператор
+													идёт перед переменной (++counter)
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">
+											Сложные операции над числами с помощью функций</button>
+										<div class="accordion-secondary__content">
+											<p>
+												Получение абсолютного (положительного) значения числа
+												<br><img src="@img/js/module-2/image-7.png" alt="">
+											</p>
+											<p>
+												Округление
+												<br><img src="@img/js/module-2/image-8.png" alt="">
+											</p>
+											<p>
+												Наибольшее и наименьшее число
+												<br><img src="@img/js/module-2/image-9.png" alt="">
+											</p>
+											<p>
+												Возведение в степерь
+												<br><img src="@img/js/module-2/image-10.png" alt="">
+											</p>
+											<p>
+												Случайные числа
+												<br><img src="@img/js/module-2/image-11.png" alt="">
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabs__body js-module-3">
+
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Типы данных</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Значение в JavaScript всегда относится к данным определённого типа.
+													Например, это может быть строка или число.
+												</p>
+												<p>
+													Переменная в JavaScript может содержать любые данные. В один момент
+													там может быть строка, а в другой – число:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-1.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Типы данных:
+											String</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h4 class="font-h4">
+													Строка
+												</h4>
+												<p>
+													Строка (string) в JavaScript должна быть заключена в кавычки.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-2.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													В JavaScript существует три типа кавычек.
+												</p>
+												<ol class="grid-column-1">
+													<li>
+														Двойные кавычки: "Привет"
+													</li>
+													<li>
+														Одинарные кавычки: 'Привет'
+													</li>
+													<li>
+														Обратные кавычки: `Привет`.
+													</li>
+												</ol>
+												<p>
+													Двойные или одинарные кавычки являются «простыми», между ними нет
+													разницы в JavaScript.
+												</p>
+												<p>
+													Обратные же кавычки имеют расширенную функциональность. Они
+													позволяют нам встраивать выражения в строку, заключая их в ${…}.
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-2.png" alt="">
+												</p>
+												<p>
+													Выражение внутри ${…} вычисляется, и его результат становится частью
+													строки.
+												</p>
+												<p>
+													Мы можем положить туда всё, что угодно: переменную name, или
+													выражение 1 + 2, или что-то более сложное.
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Типы данных:
+											Boolean</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h4 class="font-h4">
+													Булевый (логический) тип
+												</h4>
+												<p>
+													Булевый тип (boolean) может принимать только два значения: true
+													(истина) и false (ложь).
+												</p>
+												<p>
+													Такой тип, как правило, используется для хранения значений да/нет:
+													true значит «да, правильно», а false значит «нет, не правильно».
+												</p>
+												<p>
+													Например:
+													<br><img src="@img/js/module-3/image-4.png" alt="">
+												</p>
+												<p>
+													Булевые значения также могут быть результатом сравнений:
+													<br><img src="@img/js/module-3/image-5.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">
+											Сравнение разных типов между собой
+										</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<img src="@img/js/module-3/image-6.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-7.png" alt="">
+												</p>
+												<p>
+													Сравнение строк происходит посимвольно по кодам символа,
+													условно "по алфавиту"
+													<br><img src="@img/js/module-3/image-8.png" alt="">
+												</p>
+												<p>
+													Строка содержащие в себе число, будет преобразовано в число
+													<br><img src="@img/js/module-3/image-9.png" alt="">
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													При применении операторов больше или меньше к строкам, в которых
+													содержится что-то
+													отличное от числа, всегда вернётся
+													<span class="fw700">false</span>
+													Такие строки преобразуются в
+													<span class="fw700">NaN</span>, то есть такие значения не
+													воспринимаются как номера.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-10.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">
+											Условные операторы
+										</button>
+										<div class="accordion-secondary__content">
+
+											<div>
+												<h4 class="font-h4">if</h4>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Условные операторы - это операторы, которые позволяют
+													выполнять какой либо код, если выполнено условие.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-11.png" alt="">
+												</p>
+												<p>
+													Более сложная конструкция:
+													<br><img src="@img/js/module-3/image-12.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">switch</h4>
+												<p>
+													Конструкция switch заменяет собой сразу несколько if.
+												</p>
+												<p>
+													Она представляет собой более наглядный способ сравнить выражение
+													сразу с несколькими вариантами.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-14.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<img src="@img/js/module-3/image-13.png" alt="">
+													<br>Результат: Перед нами Мотоцикл
+												</p>
+											</div>
+											<div>
+												<p>
+													<img src="@img/js/module-3/image-15.png" alt="">
+													<br>Результат: Вторник - это будний день
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Условный оператор
+											„?“</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Оператор представлен знаком вопроса ?. Его также называют
+													«тернарный», так как этот оператор, единственный в своём роде, имеет
+													три аргумента.
+												</p>
+												<p>
+													Синтаксис:
+													<br><img src="@img/js/module-3/image-16.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Если функция <span class="fw700">random</span>
+													выдаст число больше <span class="fw700">0.5</span>,
+													то выведет
+													<span class="fw700">1</span>,
+													если же меньше то
+													<span class="fw700">0</span>,
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-17.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Логические
+											операторы</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h4 class="font-h4">|| (ИЛИ)</h4>
+												<div>
+													<p>
+														В случае, если какой-либо из аргументов true, он вернёт true, в
+														противоположной ситуации возвращается false.
+													</p>
+													<p>
+														<img src="@img/js/module-3/image-21.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Оператор || выполняет следующие действия:
+													</p>
+													<ol class="grid-column-1">
+														<li>
+															Вычисляет операнды слева направо.
+														</li>
+														<li>
+															Каждый операнд конвертирует в логическое значение. Если
+															результат true, останавливается и возвращает исходное
+															значение
+															этого операнда.
+														</li>
+														<li>
+															Если все операнды являются ложными (false), возвращает
+															последний
+															из них.
+														</li>
+													</ol>
+												</div>
+												<p>
+													Другими словами, цепочка ИЛИ || возвращает первое истинное значение
+													или последнее, если такое значение не найдено.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-18.png" alt="">
+												</p>
+												<p>
+													Результат: Воскресенье - это выходной
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">&& (И)</h4>
+												<div>
+													<p>
+														В традиционном программировании И возвращает true, если оба
+														аргумента истинны, а иначе – false:
+													</p>
+													<p>
+														<img src="@img/js/module-3/image-20.png" alt="">
+													</p>
+												</div>
+
+												<div>
+													<p>
+														Оператор && выполняет следующие действия:
+													</p>
+													<ol class="grid-column-1">
+														<li>
+															Вычисляет операнды слева направо.
+														</li>
+														<li>
+															Каждый операнд преобразует в логическое значение. Если
+															результат false, останавливается и возвращает исходное
+															значение этого операнда.
+														</li>
+														<li>
+															Если все операнды были истинными, возвращается последний.
+														</li>
+													</ol>
+												</div>
+												<p>
+													Другими словами, И возвращает первое ложное значение. Или последнее,
+													если ничего не найдено.
+												</p>
+
+												<div>
+													<p>
+														<img src="@img/js/module-3/image-19.png" alt="">
+													</p>
+													<p>
+														Результат: Допустимый пароль
+													</p>
+												</div>
+											</div>
+											<p>
+												<span class="remember">
+													Запомнить!
+												</span>
+												&& (И) возвращает первое ложное значение, а || (ИЛИ) - первое истинное.
+											</p>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Итог</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<ol class="grid-column-1">
+													<li>
+														Любая строка, кроме пустой (а строка "0" – не пустая), в
+														логическом контексте становится true.
+													</li>
+													<li>
+														Есть три типа кавычек. Строки, использующие обратные кавычки,
+														могут занимать более одной строки в коде и включать выражения
+														${…}.
+													</li>
+													<li>
+														Строки в JavaScript кодируются в UTF-16.
+													</li>
+													<li>
+														Есть специальные символы, такие как \n, и можно добавить символ
+														по его юникодному коду, используя \u….
+													</li>
+													<li>
+														Для получения подстроки используйте slice или substring.
+													</li>
+													<li>
+														Для того, чтобы перевести строку в нижний или верхний регистр,
+														используйте toLowerCase/toUpperCase.
+													</li>
+													<li>
+														Для поиска подстроки используйте indexOf или
+														includes/startsWith/endsWith, когда надо только проверить, есть
+														ли вхождение.
+													</li>
+													<li>
+														str.trim() — убирает пробелы в начале и конце строки.
+													</li>
+													<li>
+														str.repeat(n) — повторяет строку n раз.
+													</li>
+												</ol>
+											</div>
+											<h4 class="font-h4">Получения подстроки</h4>
+											<div>
+												<p>
+													<img src="@img/js/module-3/image-24.png" alt="">
+												</p>
+												<p>
+													Возвращает часть строки от start до (не включая) end.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-25.png" alt="">
+												</p>
+												<p>
+													Если аргумент end отсутствует, slice возвращает символы до конца
+													строки:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-26.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-27.png" alt="">
+												</p>
+											</div>
+											<h4 class="font-h4">Поиск подстроки</h4>
+											<div>
+												<p>
+													<span class="fw700">str.indexOf(substr, pos).</span>
+												</p>
+												<p>
+													Он ищет подстроку substr в строке str, начиная с позиции pos, и
+													возвращает позицию, на которой располагается совпадение, либо -1 при
+													отсутствии совпадений.
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-34.png" alt="">
+												</p>
+												<p>
+													Необязательный второй аргумент позволяет начать поиск с определённой
+													позиции.
+												</p>
+												<p>
+													Например, первое вхождение "id" — на позиции 1. Для того, чтобы
+													найти следующее, начнём поиск с позиции 2:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-35.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Метод <span class="fw700">str.includes(substr, pos)</span>
+													возвращает true, если в строке str есть подстрока substr,
+													либо false, если нет.
+												</p>
+												<p>
+													Это — правильный выбор, если нам необходимо проверить, есть ли
+													совпадение, но позиция не нужна:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-22.png" alt="">
+												</p>
+												<p>
+													Необязательный второй аргумент str.includes позволяет начать поиск с
+													определённой позиции:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-23.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Практика</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<img src="@img/js/module-3/image-38.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-36.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-37.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-28.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-29.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-30.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-31.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-32.png" alt="">
+											</div>
+											<div>
+												<img src="@img/js/module-3/image-33.png" alt="">
+											</div>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+							<div class="tabs__body js-module-4">
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Массивы</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">Массив</span>
+													- это сложный тип данных, который позволняет хранить множество
+													элементов
+													в определенном порядке
+													<br>
+													(для хранения списка чего-либо: пользователей, товаров, элементов
+													HTML и т.д.)
+												</p>
+												<p>
+													Синтаксис:
+													<br><img src="@img/js/module-4/image-1.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Элементы массива нумеруются начиная с нуля.
+												</p>
+												<p>
+													Мы можем получить элемент, указав его номер в квадратных скобках:
+													<br><img src="@img/js/module-4/image-2.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Бывают ситуации когда заранее не известны какие элементы могут быть
+													в массиве. В таком случае можно создать сначало пустой массив, и
+													затем
+													заполнить его какими то данными.
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">Методы push и unshift</h4>
+												<p>
+													<span class="fw700">push</span> - добавляет элемент в конец массива.
+													<br><img src="@img/js/module-4/image-3.png" alt="">
+												</p>
+												<p>
+													<span class="fw700">unshift</span> - Добавляет элемент в начало
+													массива
+													<br><img src="@img/js/module-4/image-4.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Что-бы получить длину массива, существует свойство
+													<span class="fw700">length</span>.
+													<br><img src="@img/js/module-4/image-5.png" alt="">
+												</p>
+												<p>
+													Длина массива может понадобится при работе с циклами, либо для того
+													что бы вывести последний элемент массива:
+													<br><img src="@img/js/module-4/image-6.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Мы можем заменить элемент:
+													<br><img src="@img/js/module-4/image-7.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Цикл For</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">Цикл For</span>
+													позволняет выполнять одинаковые действия определенное количество раз
+												</p>
+											</div>
+											<div>
+												<p>
+													Объявление оператора for выглядит следующим образом:
+												</p>
+												<p>
+													<img src="@img/js/module-4/image-8.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Цикл ниже выведет числа от 0 до 2
+												</p>
+												<p>
+													<img src="@img/js/module-4/image-9.png" alt="">
+												</p>
+												<p>
+													Конструкция for поподробней:
+												</p>
+												<p>
+													<img src="@img/js/module-4/image-10.png" alt="">
+												</p>
+												<p>
+													Алгоритм работы цикла выглядит следующим образом:
+												</p>
+												<p>
+													<img src="@img/js/module-4/image-11.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">for of</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">for of</span>
+													создаёт цикл, проходящий по перечислимым объектам
+													(включая Array, Map, Set...)
+												</p>
+												<p>
+													Синтаксис:
+													<br><img src="@img/js/module-4/image-12.png" alt="">
+												</p>
+												<div>
+													<div>
+														<p>
+															Например, создадим массив, и выведем каждый элемент
+															отдельно:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-13.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-14.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">for in</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">for in</span>
+													предназначен для перебора перечисляемых имён свойств объекта
+													(индекс)
+												</p>
+											</div>
+											<div>
+												<div>
+													<p>
+														Например, создадим массив, и выведем каждый элемент со своим
+														индексом
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-15.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-16.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<p>
+													Более сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															Например, создадим массив, и выведем у каждого студента его
+															место и его имя
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-18.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-19.png" alt="">
+														</p>
+													</div>
+												</div>
+												<p>
+													Особенносью цикла
+													<span class="fw700">for in</span>
+													являеться то, что переменная является не Number, а
+													<span class="fw700">String (Строка)</span>
+												</p>
+												<p>
+													Поэтому с примером выше нужно применить функцию
+													<span class="fw700">parseInt</span>
+													к переменной
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="fw700">parseInt</span>
+													- читает число из строки
+												</p>
+												<p>
+													Если в процессе чтения возникает ошибка, они возвращают
+													полученное до ошибки число.
+													Функция parseInt возвращает целое число, а parseFloat
+													возвращает число с плавающей точкой:
+												</p>
+												<p>
+													<img src="@img/js/module-4/image-17.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">while</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Цикл
+													<span class="fw700">while</span>
+													будет выполнять блок кода, до тех пор пока выполняется указанное
+													условие
+												</p>
+												<p>
+													Синтаксис:
+													<br><img src="@img/js/module-4/image-20.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Более сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															Например, вы пьёте чай из чашки, и вы делаете глоток до тех
+															пор, пока
+															в чашке не закончится чай. Как только в чашке чай закончился
+															вы перестаёте пить чай,
+															то есть выходите из цикла.
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-21.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-22.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">do while</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Цикл
+													<span class="fw700">do while</span>
+													похожий на
+													<span class="fw700">while</span>,
+													но условие проверяется после прохождения итерации.
+													(То есть, первая итерация всегда будет выполнена)
+												</p>
+												<p>
+													Синтаксис:
+													<br><img src="@img/js/module-4/image-23.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Более сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															Игра в русскую рулетку, у нас есть револьвер с 1 патроном в
+															барабане.
+															Каждый раз крутим барабан и надеемся что выстрела не будет.
+															<br>
+															Хотя бы 1 раз мы всегда нажмём на курок, а уже условие будет
+															проверяться потом.
+															<br>
+															Если выстрел произошёл, нам не повезло и мы выбываем из
+															игры.
+															<br>
+															А если условие выполнилось, мы снова нажимаем на курок и
+															проверяем условие опять
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-24.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-25.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<span class="remember">Запомнить!</span>
+												<span class="fw700">do while</span>
+												стоит использовать только в той ситуации, когда мы на 100% уверены что
+												тело цикла должно выполнится хотя-бы 1 раз.
+											</div>
+										</div>
+									</li>
+
+
+
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">continue, break</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">continue, break</span>
+													нужны в той ситуации, когда внезапно поняли что текущую итерацию
+													выполнять не нужно, и не смотря на все условия, мы хотим перейти к
+													следующей, либо выйти из цикла.
+												</p>
+											</div>
+
+
+											<div>
+												<h4 class="font-h4">continue</h4>
+												<p>
+													Сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															У нас есть колода карт из которой мы берём по 1 карте и
+															проверяем их.
+															<br>
+															Если карта являеться королём и тузом мы её
+															берём себе, а если нет, то выкидываем.
+															<br>
+															Здесь мы выполняем итерацию только для определённых карт,
+															для всех остальных карт мы просто переходим к следующей
+															итерации.
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-26.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-27.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+
+
+											<div>
+												<h4 class="font-h4">break</h4>
+												<p>
+													<span class="fw700">break</span>
+													нам нужен в той ситуации, когда мы хотим выйти из цикла.
+												</p>
+												<p>
+													Сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															Допустим, мы вытягиваем карты из колоды до тех пор, пока не
+															найдём нужную, или пока колода не закончится.
+															<br>
+															В примере мы тянем карты из колоды, пока не наткнемся на
+															<span class="fw700">даму</span>.
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-28.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-4/image-29.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<h4 class="font-h4">Примеры</h4>
+											<div>
+												<ul class="table-secondary">
+													<li class="table-secondary__title">
+														<span>for (без break)</span>
+														<span>while (break)</span>
+													</li>
+													<li>
+														<div>
+															<div>
+																<span>Код:</span>
+																<p>
+																	<img src="@img/js/module-4/image-30.png" alt="">
+																</p>
+															</div>
+															<div>
+																<span>Результат:</span>
+																<p>
+																	<img src="@img/js/module-4/image-31.png" alt="">
+																</p>
+															</div>
+														</div>
+														<div>
+															<div>
+																<span>Код:</span>
+																<p>
+																	<img src="@img/js/module-4/image-32.png" alt="">
+																</p>
+															</div>
+															<div>
+																<span>Результат:</span>
+																<p>
+																	<img src="@img/js/module-4/image-33.png" alt="">
+																</p>
+															</div>
+														</div>
+
+													</li>
+												</ul>
+											</div>
+
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Примеры</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<div>
+													<p>
+														Простое повторение действий по счётчику
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-34.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-35.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Заполнение массива на основе счётчика
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-36.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-37.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Заполнение массива на основе значений другого массива
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-38.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-39.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Обработка массива в обратном порядке (от последнего к первому)
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-40.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-41.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Генератор массивов длиной count со случайными числами от n до m.
+														<br>
+														n и m могут быть отрицательными, а также может быть
+														<span class="fw700">n больше m</span>
+														или
+														<span class="fw700">n меньше m</span>.
+														<br>
+														Выведите результат с помощью console.log.
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-42.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-43.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														С помощью цикла создать перевёрнутый вариант произвольной
+														строки. Например, строка «Привет, мир!» должна превратиться в
+														«!рим ,тевирП».
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-44.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-45.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Танк едет по дороге, на которой могут быть противотанковые мины.
+														Дорога должна быть представлена в виде массива roadMines из 10
+														boolean-элементов. Если элемент равен true, то это мина.
+														Движение танка должно быть представлено как цикл, в котором одна
+														итерация — продвижение танка на следующий участок дороги
+														(следующий элемент массива). При передвижении выводить в консоль
+														сообщение «танк переместился на ${position}», где position —
+														номер ячейки + 1. Если танк попал на мину, то нужно вывести
+														сообщение «танк повреждён», если это 1-й взрыв, и «танк
+														уничтожен», если это 2-й взрыв. После 2-го взрыва танк считается
+														уничтоженным и прекращает движение.
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-47.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-48.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Сгенерировать массив чисел 1–31 включительно (числа месяца).
+														Вывести с помощью console.log для каждого из чисел строку
+														${число} января, ${день недели}. День недели 1 января должен
+														задаваться с помощью переменной, то есть программа должна
+														корректно работать для любого дня недели, с которого начинается
+														месяц. Подсказка 1: для дней недели можно создать массив с
+														названиями дней, чтобы обращаться к нему по индексу. Подсказка
+														2: индекс дня недели можно вычислить с помощью операции остатка
+														от деления.
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-49.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-4/image-50.png" alt="">
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+							<div class="tabs__body js-module-5">
+
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции - базовый
+											синтаксис</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Синтаксис объявления и вызова функции
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-1.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Синтаксис объявления и вызова функции через переменную
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-2.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Отличие объявлением между
+													<span class="fw700">function с именем</span>
+													и
+													<span class="fw700">переменной</span>
+													,
+													является то, что функция объявлена с помощью
+													<span class="fw700">function с именем</span>
+													можно вызвать даже до её объявления,
+													а функция объявлена с помощью
+													<span class="fw700">переменной</span>
+													вызвать до объявления не получится.
+												</p>
+											</div>
+
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции -
+											аргументы</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<div>
+													<p>
+														Объявляем функцию, и в качестве его параметра мы прописываем
+														<span class="fw700">who</span>
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-3.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-4.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														В теле функции можно изменять аргумент, например немного
+														приукрасив
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-7.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-8.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Если параметр не указан, то его значением становится undefined.
+													</p>
+													<p>
+														Если мы хотим задать параметру
+														<span class="fw700">who</span>
+														значение по умолчанию, мы должны указать его после =.
+													</p>
+													<p>
+														Теперь, если параметр
+														<span class="fw700">who</span>
+														не указан, его значением будет "незнакомец"
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-5.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-6.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<p>
+													В качестве параметра при вызове функции, можно передать переменную
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-9.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Сложный пример:
+												</p>
+												<div>
+													<div>
+														<p>
+															Создадим функцию с 2-мя параметрами:
+															<br>
+															<span class="fw700">cards</span>
+															- массив с картами, которые мы будем искать
+															<br>
+															<span class="fw700">wantedCard</span>
+															- название той карты, которую мы хотим найти в колоде,
+															по умолчанию укажем 'Туз'.
+														</p>
+														<p>
+															<img src="@img/js/module-5/image-10.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-5/image-11.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции - return и
+											undefined</button>
+										<div class="accordion-secondary__content">
+
+											<div>
+												<p>
+													Функция может вернуть результат, который будет передан в вызвавший
+													её код.
+												</p>
+												<p>
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-12.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													return может находиться в любом месте тела функции.
+													<br>
+													Как только выполнение доходит до этого места, функция
+													останавливается, и
+													значение возвращается в вызвавший её код (присваивается переменной
+													result выше).
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Результат функции с пустым return или без него – undefined
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													undefined - это значение, которые означает отсутствие значения
+												</p>
+												<p>
+													Например, данная функция и переменная возращает
+													<span class="fw700">undefined</span>
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-21.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-22.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Никогда не добавлять перевод строки между return и его значением
+												</p>
+												<ul class="table-secondary">
+													<li class="table-secondary__title">
+														<span>Как НЕ нужно</span>
+														<span>Как нужно</span>
+													</li>
+													<li>
+														<div>
+															<p>
+																<img src="@img/js/module-5/image-13.png" alt="">
+															</p>
+															<p>
+																Код не выполнится, потому что интерпретатор JavaScript
+																подставит точку с запятой после return. Для него это
+																будет выглядеть так:
+															</p>
+															<p>
+																<img src="@img/js/module-5/image-14.png" alt="">
+															</p>
+															<p>
+																Таким образом, это фактически стало пустым return.
+															</p>
+														</div>
+														<div>
+															<p>
+																<img src="@img/js/module-5/image-15.png" alt="">
+															</p>
+															<p>
+																Или
+															</p>
+															<p>
+																<img src="@img/js/module-5/image-16.png" alt="">
+															</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<div>
+													<img src="@img/js/module-5/image-17.png" alt="">
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-18.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<img src="@img/js/module-5/image-19.png" alt="">
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-20.png" alt="">
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции - undefined и
+											null</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													<span class="fw700">null</span>
+													мы используем тогда, когда хотим явно указать отсутствие чего то,
+													например когда
+													ничего не подключено, нет решения уравнения...
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-23.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-24.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="fw700">undefined</span>
+													- перевод (не определено). Это значение по умолчанию, если мы явно
+													не прописали ничего в коде
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-25.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-26.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-27.png" alt="">
+												</p>
+											</div>
+											<h4 class="font-h4">
+												Отличия между null и undefined
+											</h4>
+											<div>
+												<p>
+													null является определённым значением отсутствия объекта, тогда как
+													undefined обозначает неопределённость.
+												</p>
+												<p>
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-5/image-28.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции -
+											Именование</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">Правила наименования:</span>
+												</p>
+												<ol>
+													<li>
+														Имя должно соответствовать содержанию (что делает функция, что
+														хранит переменная, или что находится в js файле)
+													</li>
+													<li>
+														Используйте легко читаемые имена, такие как userName или
+														shoppingCart.
+													</li>
+													<li>
+														Избегайте использования аббревиатур или коротких имён, таких как
+														a, b, c, за исключением тех случаев, когда вы точно знаете, что
+														так нужно.
+													</li>
+												</ol>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции -
+											IIFE</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">IIFE</span> (Immediately Invoked Function
+													Expression)
+													это JavaScript функция, которая выполняется сразу же после того, как
+													она была определена.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-69.png" alt="">
+												</p>
+												<p>
+													Переменные внутри функции не могут быть использованы за пределами её
+													области видимости.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-70.png" alt="">
+												</p>
+												<p>
+													Если переменная объявлена за пределом функции, а в самой функции она
+													изменена, то изменения сохранятся.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-72.png" alt="">
+												</p>
+												<p>
+													Переменная, которой присвоено IIFE, хранит в себе результат
+													выполнения функции, но не саму функцию.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-71.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Практика
+										</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<div>
+													<p>
+														Напишите функцию, которая создаёт массив email-адресов, не
+														попавших
+														в чёрный список. В качестве аргументов функция должна принимать:
+														массив строк с исходными email адресами, массив строк с email
+														адресами в чёрном списке.
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-29.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-30.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														<img src="@img/js/module-5/image-33.png" alt="">
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-31.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-5/image-32.png" alt="">
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+							<div class="tabs__body js-module-6">
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Объекты -
+											Синтаксис</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Объект - это тип данных, который позволняет объединить многожество
+													значений в одном.
+												</p>
+												<p>
+													Пустой объект («пустой ящик») можно создать, используя один из двух
+													вариантов синтаксиса:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-1.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													При использовании литерального синтаксиса {...} мы сразу можем
+													поместить в объект несколько свойств в виде пар «ключ: значение»
+												</p>
+												<p>
+													У каждого свойства есть ключ (также называемый «имя» или
+													«идентификатор»).
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-2.png" alt="">
+												</p>
+												<div>
+													В объекте <span class="fw700">user</span>
+													сейчас находятся шесть свойств:
+													<ol>
+														<li>
+															Первое свойство с именем "name" и значением "John".
+														</li>
+														<li>
+															Второе свойство с именем "age" и значением 30.
+														</li>
+														<li>
+															Третье свойство с именем "surname" и значением из переменной
+															"surname".
+														</li>
+														<li>
+															Четвертое свойство с именем "married" и значением true.
+														</li>
+														<li>
+															Пятое свойство с именем "birthDate" и значение нового
+															объекта.
+														</li>
+														<li>
+															Шестое свойство с именем "property with spaces" и значением
+															true. (свойств с ключом в кавычках лучше избегать,
+															потому-что не удобно работать с ними).
+														</li>
+													</ol>
+												</div>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Синтаксис создания нового свойства в объекте.
+												</h5>
+												<p>
+													Например создадим новое свойство в объекте
+													<span class="fw700">user</span> с именем 'patronymic' и значением
+													'sergeevich'
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-3.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Синтаксис изменения свойства в объекте.
+												</h5>
+												<p>
+													Например изменим свойство в объекте
+													<span class="fw700">user</span> с именем 'age' и значением 30, на 20
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-4.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Синтаксис удаления свойства в объекте.
+												</h5>
+												<p>
+													Например удалим свойство в объекте
+													<span class="fw700">user</span> с именем 'birthDate'
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-5.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Синтаксис создания, изменения, или удаления свойства с именем в
+													кавычках
+												</h5>
+												<p>
+													Например удалим свойство в объекте
+													<span class="fw700">user</span> с именем 'property with spaces'
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-6.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Синтаксис получения значения свойства
+												</h5>
+												<p>
+													Например получим в объекте
+													<span class="fw700">user</span> значение свойства 'surname'
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-7.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Здесь переменная key может быть вычислена во время выполнения кода
+													или зависеть от пользовательского ввода. После этого мы используем
+													её для доступа к свойству. Это даёт нам большую гибкость.
+												</p>
+												<p>
+													Пример:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-8.png" alt="">
+												</p>
+												<p>
+													Запись «через точку» такого не позволяет
+												</p>
+												<ul class="table-secondary">
+													<li class="table-secondary__title">
+														<span>Как нужно</span>
+														<span>Как НЕ нужно</span>
+													</li>
+													<li>
+														<div>
+															<p>
+																<img src="@img/js/module-6/image-9.png" alt="">
+															</p>
+														</div>
+														<div>
+															<p>
+																<img src="@img/js/module-6/image-10.png" alt="">
+															</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Объект, объявленный как константа, может быть изменён
+												</p>
+												<p>
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-21.png" alt="">
+												</p>
+												<p>
+													Дело в том, что объявление const защищает от изменений только саму
+													переменную user, а не её содержимое.
+												</p>
+												<p>
+													Определение const выдаст ошибку только если мы присвоим переменной
+													другое значение: user=....
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Объекты - Методы и
+											this</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Объекты обычно создаются, чтобы представлять сущности реального
+													мира, будь то пользователи, заказы и так далее:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-11.png" alt="">
+												</p>
+												<p>
+													И так же, как и в реальном мире, пользователь может совершать
+													действия: выбирать что-то из корзины покупок, авторизовываться,
+													выходить из системы, оплачивать и т.п.
+													<br>
+													Такие действия в JavaScript представлены свойствами-функциями
+													объекта.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Примеры методов
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-12.png" alt="">
+												</p>
+												<p>
+													Здесь мы просто использовали Function Expression (функциональное
+													выражение), чтобы создать функцию для приветствия, и присвоили её
+													свойству user.sayHi нашего объекта.
+												</p>
+												<p>
+													Затем мы вызвали её. Теперь пользователь может говорить!
+												</p>
+												<p>
+													Функцию, которая является свойством объекта, называют методом этого
+													объекта.
+												</p>
+												<p>
+													Итак, мы получили метод sayHi объекта user.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Сокращённая запись метода
+												</h5>
+												<div>
+													<p>
+														Существует более короткий синтаксис для методов в литерале
+														объекта.
+													</p>
+													<p>
+														Мы можем пропустить ключевое слово "function" и просто написать
+														sayHi().
+													</p>
+													<ul class="table-secondary">
+														<li class="table-secondary__title">
+															<span>Обычная запись</span>
+															<span>Сокращённая запись</span>
+														</li>
+														<li>
+															<div>
+																<p>
+																	<img src="@img/js/module-6/image-13.png" alt="">
+																</p>
+															</div>
+															<div>
+																<p>
+																	<img src="@img/js/module-6/image-14.png" alt="">
+																</p>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Ключевое слово «this» в методах
+												</h5>
+												<p>
+													Как правило, методу объекта необходим доступ к информации, которая
+													хранится в объекте, чтобы выполнить с ней какие-либо действия (в
+													соответствии с назначением метода).
+												</p>
+												<p>
+													Например, коду внутри user.sayHi() может понадобиться имя
+													пользователя, которое хранится в объекте user.
+												</p>
+												<p>
+													<span class="fw700">
+														Для доступа к информации внутри объекта метод может использовать
+														ключевое слово this.
+													</span>
+												</p>
+												<p>
+													Значение this – это объект «перед точкой», который использовался для
+													вызова метода.
+												</p>
+												<p>
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-15.png" alt="">
+												</p>
+												<p>
+													Здесь во время выполнения кода user.sayHi() значением this будет
+													являться user (ссылка на объект user).
+												</p>
+												<p>
+													Технически также возможно получить доступ к объекту без ключевого
+													слова this, ссылаясь на него через внешнюю переменную (в которой
+													хранится ссылка на этот объект):
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-16.png" alt="">
+												</p>
+												<p>
+													…Но такой код будет ненадёжным. Если мы решим скопировать ссылку на
+													объект user в другую переменную, например, admin = user, и
+													перезапишем переменную user чем-то другим, тогда будет осуществлён
+													доступ к неправильному объекту при вызове метода из admin.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-17.png" alt="">
+												</p>
+												<p>
+													Если мы используем this.name вместо user.name внутри console, тогда
+													этот код будет работать.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													«this» не является фиксированным
+												</h5>
+												<p>
+													В JavaScript ключевое слово «this» ведёт себя иначе, чем в
+													большинстве других языков программирования. Оно может использоваться
+													в любой функции.
+												</p>
+												<p>
+													В этом коде нет синтаксической ошибки:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-18.png" alt="">
+												</p>
+												<p>
+													Значение this вычисляется во время выполнения кода и зависит от
+													контекста.
+												</p>
+												<p>
+												</p>
+												<div>
+													<div>
+														<p>
+															Например, здесь одна и та же функция назначена двум разным
+															объектам
+															и имеет различное значение «this» при вызовах:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-19.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-20.png" alt="">
+														</p>
+													</div>
+												</div>
+												<p>
+													Правило простое: при вызове obj.f() значение this внутри f равно
+													obj. Так что, в приведённом примере это user или admin.
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">Итого</h4>
+												<div>
+													<ol>
+														<li>
+															Функции, которые находятся в объекте в качестве его свойств,
+															называются «методами».
+														</li>
+														<li>
+															Методы позволяют объектам «действовать»:
+															object.doSomething().
+														</li>
+														<li>
+															Методы могут ссылаться на объект через this.
+														</li>
+													</ol>
+												</div>
+												<div>
+													<p class="fw700">
+														Значение this определяется во время исполнения кода.
+													</p>
+													<ol>
+														<li>
+															При объявлении любой функции в ней можно использовать this,
+															но
+															этот this не имеет значения до тех пор, пока функция не
+															будет
+															вызвана.
+														</li>
+														<li>
+															Эта функция может быть скопирована между объектами (из
+															одного
+															объекта в другой).
+														</li>
+														<li>
+															Когда функция вызывается синтаксисом «метода» –
+															object.method(),
+															значением this во время вызова является объект перед точкой.
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Объекты - Операции над
+											объектами</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h4 class="font-h4">
+													Объединение объектов
+												</h4>
+												<div>
+													<ul class="table-secondary">
+														<li class="table-secondary__title">
+															<span>Оператор Spread (...)</span>
+															<span>Функция Object.assign()</span>
+														</li>
+														<li>
+															<div>
+																<p>
+																	<img src="@img/js/module-6/image-22.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-6/image-23.png" alt="">
+																</p>
+															</div>
+															<div>
+																<p>
+																	<img src="@img/js/module-6/image-24.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-6/image-25.png" alt="">
+																</p>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Если у объектов есть одинаковые свойства, то выведется последний
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Получение имён свойств: Object.keys()
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-26.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-27.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Получение значений свойств: Object.values()
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-28.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-29.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Получение имён и значений свойств: Object.entries()
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-30.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-31.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Объект это ссылочный тип данных, при присваивании переменной с
+													объектом в другую переменную, объект не будет копироваться.
+												</p>
+												<p>
+													Вместо этого будет копироваться ссылка на объект, а сам объект будет
+													одним и тем-же.
+												</p>
+												<p>
+													Любая переменная в которой мы записываем объект, хранит не сам
+													объект, а ссылку на него.
+												</p>
+												<div>
+													<div>
+														<p>
+															obj и otherObj ссылаются на один же объект,
+															поэтому свойство поменяется и там, и там
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-32.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-33.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<h5 class="font-h5">Сравнение объектов</h5>
+												<p>
+													При сравнении двух переменных с объектами, они будут равны когда
+													указывает на один и тот-же объект.
+												</p>
+												<p>
+													Во всех других случаях они будут не равны.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-34.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-35.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-36.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Функцию Object.assign() стоит использовать аккуратно.
+												</p>
+												<p>
+													К объекту в первом аргументе "{ }" будут подмешаны все последующие
+													объекты,
+													если надо подмешать к уже существующему объекту, то можно
+													использовать Object.assign()
+												</p>
+												<p>
+													Если же не надо менять исходный объект, то придётся создать новый и
+													подмешивать к нему всё необходимое.
+												</p>
+											</div>
+											<div>
+												<div>
+													<p>
+														Функция вернёт получившийся объект, но это будет тот же объект,
+														который мы передали в первый аргумент,
+														то есть она изменит объект me и вернёт его
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-37.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-38.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Тут подмешиваем другой объект и свойства в свежесозданный пустой
+														объект {},
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-39.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-40.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<div>
+													<p>
+														Более удобный способ с помощью spread
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-41.png" alt="">
+													</p>
+												</div>
+												<div>
+													<p>
+														Результат:
+													</p>
+													<p>
+														<img src="@img/js/module-6/image-42.png" alt="">
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Объекты - Объекты и
+											циклы</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Для перебора объекта можно использовать следующий способ:
+												</p>
+												<div>
+													<div>
+														<p>
+															У нас есть объект
+															<span class="fw700">computer</span>, мы его преобразовываем
+															в массив с помощью
+															<span class="fw700">Object.entries()</span>, и далее
+															используем цикл
+															<span class="fw700">for of</span>.
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-43.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-44.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<h4 class="font-h4">
+													Для перебора существуют и другие способы:
+												</h4>
+												<div>
+													<div>
+														<h5 class="font-h5">
+															Для перебора значений:
+														</h5>
+														<p>
+															<img src="@img/js/module-6/image-45.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-46.png" alt="">
+														</p>
+													</div>
+												</div>
+												<div>
+													<div>
+														<h5 class="font-h5">
+															Для перебора ключей и значений:
+														</h5>
+														<p>
+															<img src="@img/js/module-6/image-47.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-48.png" alt="">
+														</p>
+													</div>
+												</div>
+												<div>
+													<div>
+														<h5 class="font-h5">
+															Для перебора ключей и значений:
+														</h5>
+														<p>
+															<img src="@img/js/module-6/image-49.png" alt="">
+														</p>
+													</div>
+													<div>
+														<p>
+															Результат:
+														</p>
+														<p>
+															<img src="@img/js/module-6/image-50.png" alt="">
+														</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Массив является объектом.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-51.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Массив так-же как и объекты передаются по ссылке (переменная хранит
+													ссылку на массив и не копируется)
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-52.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-53.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Типы данных,
+											typeof</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Значение в JavaScript всегда относится к данным определённого типа.
+													Например, это может быть строка или число.
+												</p>
+												<p>
+													Переменная в JavaScript может содержать любые данные. В один момент
+													там может быть строка, а в другой – число:
+												</p>
+												<p>
+													<img src="@img/js/module-3/image-1.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Number
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-54.png" alt="">
+												</p>
+												<p>
+													Числовой тип данных (number) представляет как целочисленные
+													значения, так и числа с плавающей точкой.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													BigInt
+												</h5>
+												<p>
+													В JavaScript тип «number» не может содержать числа больше, чем
+													9007199254740991, или меньше, чем 9007199254740991 для отрицательных
+													чисел.
+													Это техническое ограничение вызвано их внутренним представлением.
+												</p>
+												<p>
+													Чтобы создать значение типа BigInt, необходимо добавить
+													<span class="fw700">n</span>
+													в конец числового литерала:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-55.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													String
+												</h5>
+												<p>
+													Строка (string) в JavaScript должна быть заключена в кавычки.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-56.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Boolean
+												</h5>
+												<p>
+													Булевый тип (boolean) может принимать только два значения: true
+													(истина) и false (ложь).
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-57.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													null
+												</h5>
+												<p>
+													<img src="@img/js/module-6/image-58.png" alt="">
+												</p>
+												<p>
+													Это просто специальное значение, которое представляет собой
+													«ничего», «пусто» или «значение неизвестно».
+												</p>
+												<p>
+													В приведённом выше коде указано, что значение переменной age
+													неизвестно.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													undefined
+												</h5>
+												<p>
+													undefined означает, что «значение не было присвоено».
+												</p>
+												<p>
+													Если переменная объявлена, но ей не присвоено никакого значения, то
+													её значением будет undefined:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-59.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													object
+												</h5>
+												<p>
+													object это ссылочный тип, значения не копируются при присваивании
+													(копируются только ссылки на них).
+												</p>
+												<p>
+													object может объединять в себе несколько значений других типов, и
+													даже вложенных объектов.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-60.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="fw700 color-red">typeof</span>
+													вернёт названия типа значения ввиде строки.
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-61.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-62.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-63.png" alt="">
+												</p>
+												<div>
+													<ol>
+														<li>
+															<span class="fw700">Math</span>
+															— это встроенный объект, который предоставляет
+															математические операции и константы
+														</li>
+														<li>
+															<span class="fw700">typeof alert...</span>
+															возвращает "function", потому что alert является функцией
+														</li>
+														<li>
+															<span class="fw700">typeof null == object</span>
+															Это официально признанная ошибка в typeof, ведущая начало с
+															времён создания JavaScript и сохранённая для совместимости.
+															Конечно, null не является объектом. Это специальное значение
+															с отдельным типом.
+														</li>
+													</ol>
+												</div>
+											</div>
+											<div>
+												<p>
+													<span class="fw700">typeof</span>
+													часто применяется когда заранее не известно с каким типом данных
+													нужно работать
+												</p>
+												<p>
+													Например:
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-64.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-6/image-65.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													Итого
+												</h5>
+												<div>
+													<p>
+														В JavaScript есть 8 основных типов
+													</p>
+													<ol>
+														<li>
+															<span class="fw700">number</span>
+															для любых чисел: целочисленных или чисел с плавающей точкой;
+															целочисленные значения ограничены диапазоном ±
+															9007199254740991.
+														</li>
+														<li>
+															<span class="fw700">bigint</span>
+															для целых чисел произвольной длины.
+														</li>
+														<li>
+															<span class="fw700">string</span>
+															для строк. Строка может содержать ноль или больше символов,
+															нет отдельного символьного типа.
+														</li>
+														<li>
+															<span class="fw700">boolean</span>
+															для true/false.
+														</li>
+														<li>
+															<span class="fw700">null</span>
+															для неизвестных значений – отдельный тип, имеющий одно
+															значение null.
+														</li>
+														<li>
+															<span class="fw700">undefined</span>
+															для неприсвоенных значений – отдельный тип, имеющий одно
+															значение undefined.
+														</li>
+														<li>
+															<span class="fw700">object</span>
+															для более сложных структур данных.
+														</li>
+														<li>
+															<span class="fw700">symbol</span>
+															для уникальных идентификаторов.
+														</li>
+
+													</ol>
+												</div>
+												<div>
+													<p>
+														Оператор typeof позволяет нам увидеть, какой тип данных сохранён
+														в переменной.
+													</p>
+													<ol>
+														<li>
+															Имеет две формы: typeof x или typeof(x).
+														</li>
+														<li>
+															Возвращает строку с именем типа. Например, "string".
+														</li>
+														<li>
+															Для null возвращается "object" – это ошибка в языке, на
+															самом деле это не объект.
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">title</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabs__body js-module-7">
+								<ul data-spollers data-one-spoller
+									class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Введение</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Каждый HTML-тег или текст внутри тега является объектом.
+												</p>
+												<p>
+													Вложенные теги являются «детьми» родительского элемента.
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													DOM - «Document Object Model» (Объектная модель документа).
+												</p>
+												<p>
+													При загрузке страницы, браузер превращает HTML код в объекты, с
+													которыми мы можем взаимодействовать, набор таких объектов называется
+													- DOM (набор объектов представляющих
+													структуру веб страницы).
+												</p>
+												<p>
+													Каждый объект в DOM, который представляет HTML элемент называют -
+													DOM элементом
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Методы поиска
+											элемента</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h5 class="font-h5">children</h5>
+												<p>
+													<span class="fw700">children</span>
+													– дочерние элементы.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-3.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-1.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-2.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">parentElement</h5>
+												<p>
+													<span class="fw700">parentElement</span>
+													– родитель-элемент.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-4.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-5.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-6.png" alt="">
+												</p>
+											</div>
+											<div>
+												<ul data-spollers data-one-spoller
+													class="learn-tabs__list accordion-secondary-two__list list-reset">
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">
+															Разница между parentElement и parentNode
+														</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<p>
+																	Если использовать
+																	<span class="fw700">parentElement</span>
+																	на самый главный родитель, то он выведет
+																	<span class="fw700">null</span>,
+																	а если
+																	<span class="fw700">parentNode</span>, то выведется
+																	<span class="fw700">#document</span>.
+																</p>
+																<div>
+																	<ul class="table-secondary">
+																		<li class="table-secondary__title">
+																			<span>parentElement</span>
+																			<span>parentNode</span>
+																		</li>
+																		<li>
+																			<div>
+																				<p>
+																					<img src="@img/js/module-7/image-7.png"
+																						alt="">
+																				</p>
+																				<p>
+																					<img src="@img/js/module-7/image-8.png"
+																						alt="">
+																				</p>
+																			</div>
+																			<div>
+																				<p>
+																					<img src="@img/js/module-7/image-9.png"
+																						alt="">
+																				</p>
+																				<p>
+																					<img src="@img/js/module-7/image-10.png"
+																						alt="">
+																				</p>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													getElementById
+												</h5>
+												<p>
+													Если у элемента есть атрибут id, то мы можем получить его вызовом
+													document.getElementById(id), где бы он ни находился.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-34.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-35.png" alt="">
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													getElementById - всегда лучше использовать, если мы явно знаем
+													идентификатор элемента (он работает быстрее)
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Значение id должно быть уникальным.
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													querySelector
+												</h5>
+												<p>
+													Метод elem.querySelector(css) возвращает первый элемент,
+													соответствующий данному CSS-селектору.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-38.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													querySelectorAll
+												</h5>
+												<p>
+													elem.querySelectorAll(css) -
+													возвращает все элементы внутри elem, удовлетворяющие данному
+													CSS-селектору.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-36.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-37.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													closest
+												</h5>
+												<p>
+													elem.closest(css) -
+													ищет ближайшего предка (родителя), который соответствует
+													CSS-селектору. Сам
+													элемент также включается в поиск.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-41.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-39.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-40.png" alt="">
+												</p>
+												<p>
+													Другими словами, метод closest поднимается вверх от элемента и
+													проверяет каждого из родителей. Если он соответствует селектору,
+													поиск прекращается. Метод возвращает либо предка, либо null, если
+													такой элемент не найден.
+												</p>
+											</div>
+										</div>
+									</li>
+
+
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">
+											DOM - Методы создания/добавления/удаления элемента
+										</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<ul data-spollers data-one-spoller
+													class="learn-tabs__list accordion-secondary-two__list list-reset">
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Создание
+															элементов</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<h4 class="font-h4">createElement</h4>
+																<p>
+																	<span class="fw700">
+																		createElement
+																	</span>
+																	- создаёт элемент, но не помещает в DOM дерево
+																	страницы.
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-11.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Добавление
+															элементов</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<h4 class="font-h4">append</h4>
+																<p>
+																	<span class="fw700">
+																		append
+																	</span>
+																	- добавляет элемент в конец
+																</p>
+																<p>
+																	В данном случае
+																	<span class="fw700">h1</span>
+																	добавляется в конец
+																	<span class="fw700">body</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-12.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-13.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h4 class="font-h4">prepend</h4>
+																<p>
+																	<span class="fw700">
+																		prepend
+																	</span>
+																	- добавляет элемент в начало
+																</p>
+																<p>
+																	В данном случае
+																	<span class="fw700">h1</span>
+																	добавляется в начало
+																	<span class="fw700">body</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-14.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-15.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h4 class="font-h4">before</h4>
+																<p>
+																	<span class="fw700">
+																		before
+																	</span>
+																	- добавляет элемент до элемента
+																</p>
+																<p>
+																	В данном случае
+																	<span class="fw700">p</span>
+																	добавляется до элемента
+																	<span class="fw700">h1</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-16.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-17.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h4 class="font-h4">after</h4>
+																<p>
+																	<span class="fw700">
+																		after
+																	</span>
+																	- добавляет элемент после элемента
+																</p>
+																<p>
+																	В данном случае
+																	<span class="fw700">p</span>
+																	добавляется после элемента
+																	<span class="fw700">h1</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-18.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-19.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Изменение
+															элементов</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<h4 class="font-h4">replaceWith</h4>
+																<p>
+																	<span class="fw700">
+																		replaceWith
+																	</span>
+																	- заменяет элемент на элемент
+																</p>
+																<p>
+																	В (*) создаём
+																	<span class="fw700">div</span>
+																	после элемента
+																	<span class="fw700">h1</span>.
+																	<br>
+																	Далее в (**) создаём
+																	<span class="fw700">p</span>
+																	и заменяем
+																	<span class="fw700">div</span>
+																	на
+																	<span class="fw700">p</span>
+
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-20.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-21.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Удаление
+															элементов</button>
+														<div class="accordion-secondary-two__content">
+
+															<div>
+																<h4 class="font-h4">remove</h4>
+																<p>
+																	<span class="fw700">
+																		remove
+																	</span>
+																	- удаляет элемент
+																</p>
+																<p>
+																	Например, удалим
+																	<span class="fw700">div</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-22.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Объекты передаются по ссылке, и не копируются сами по себе
+													(если вставить куда-то элемент который уже есть в DOM, он будет
+													перемещён)
+												</p>
+											</div>
+
+
+
+
+
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Методы установления и
+											получения HTML</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h4 class="font-h4">innerHTML</h4>
+												<p>
+													<span class="fw700">
+														innerHTML
+													</span>
+													- устанавливает или получает HTML разметку элемента.
+												</p>
+												<p>
+													Например, в
+													<span class="fw700">div</span>
+													создадим параграф с текстом
+													<span class="fw700">"Hello"</span>
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-23.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-24.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">textContent</h4>
+												<p>
+													<span class="fw700">
+														textContent
+													</span>
+													- устанавливает или получает HTML разметку элемента, но игнорирует
+													HTML теги.
+												</p>
+												<p>
+													Например, в
+													<span class="fw700">div</span>
+													создадим параграф с текстом
+													<span class="fw700">Hello</span>
+												</p>
+												<p>
+													Получим просто строку.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-25.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-26.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													При вставке обычного текста стоит использовать
+													<span class="fw700">textContent</span>.
+												</p>
+												<p>
+													Гораздо безопаснее использовать
+													<span class="fw700">textContent</span>
+													чем
+													<span class="fw700">innerHTML</span>,
+													когда перед нами неизвестная строка.
+												</p>
+												<p>
+													Например, пользователь что-то ввёл в поле для ввода, в этом случае
+													это неизвестная строка,
+													и стоит использовать
+													<span class="fw700">textContent</span>.
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Атрибуты</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<ul data-spollers data-one-spoller
+													class="learn-tabs__list accordion-secondary-two__list list-reset">
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Атрибут
+															id</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<p>
+																	Для создания уникального идентификатора (id),
+																	существуеет команда:
+																</p>
+																<p>
+																	<span class="fw700">elem.id = 'id'</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-27.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-28.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Чтение/создание/удаление
+															атрибутов</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<p>
+																	<span class="remember">Запомнить!</span>
+																	Для создания своих атрибутов необходимо добавлять
+																	приставку 'data'
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-79.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h5 class="font-h5">Проверка наличие атрибута</h5>
+																<p>
+																	Для проверки наличия атрибута существует метод
+																	<span class="fw700">hasAttribute</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-80.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-81.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h5 class="font-h5">Получение значения атрибута</h5>
+																<p>
+																	Для получение значения атрибута существует метод
+																	<span class="fw700">getAttribute</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-80.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-82.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h5 class="font-h5">Установление значения атрибута</h5>
+																<p>
+																	Для установки значения атрибута существует метод
+																	<span class="fw700">setAttribute</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-80.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-83.png" alt="">
+																</p>
+															</div>
+															<div>
+																<h5 class="font-h5">Удаление атрибута</h5>
+																<p>
+																	Для удаления атрибута существует метод
+																	<span class="fw700">removeAttribute</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-29.png" alt="">
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-30.png" alt="">
+																</p>
+															</div>
+														</div>
+													</li>
+													<li class="learn-tabs__item accordion-secondary-two__item">
+														<button tabindex="-1" type="button" data-spoller
+															class="accordion-secondary-two__title btn btn-reset">Атрибут
+															class</button>
+														<div class="accordion-secondary-two__content">
+															<div>
+																<p>
+																	Для атрибута
+																	<span class="fw700">class</span>
+																	существуеет отдельное свойство
+																	<span class="fw700">classList</span>
+																</p>
+																<p>
+																	<img src="@img/js/module-7/image-32.png" alt="">
+																</p>
+																<div>
+																	<ol>
+																		<li>
+																			<span class="fw700">classList.add</span>
+																			- добавляет class у элемента
+																		</li>
+																		<li>
+																			<span class="fw700">classList.remove</span>
+																			- удаляет class у элемента
+																		</li>
+																		<li>
+																			<span class="fw700">classList.toggle</span>
+																			- переключает class у элемента.
+																			(если class есть - убирает, если нету -
+																			добавляет)
+																		</li>
+																		<li>
+																			<span
+																				class="fw700">classList.contains</span>
+																			- проверяет есть ли class у элемента.
+																		</li>
+																	</ol>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+
+										</div>
+									</li>
+
+
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - События</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													<span class="fw700">Событие</span>
+													– это сигнал от браузера о том, что что-то произошло.
+												</p>
+												<div>
+													<p class="fw700">
+														Cписок самых часто используемых событий мыши:
+													</p>
+													<ol>
+														<li>
+															<span class="fw700">click</span>
+															- происходит, когда кликнули на элемент левой кнопкой мыши
+															(на моб. устройствах при касании).
+														</li>
+														<li>
+															<span class="fw700">contextmenu</span>
+															- происходит, когда кликнули на элемент правой кнопкой мыши.
+														</li>
+														<li>
+															<span class="fw700">mouseover / mouseout</span>
+															- когда мышь наводится на / покидает элемент.
+														</li>
+														<li>
+															<span class="fw700">mousedown / mouseup</span>
+															- mousedown / mouseup – когда нажали / отжали кнопку мыши на
+															элементе.
+														</li>
+														<li>
+															<span class="fw700">mousemove </span>
+															- при движении мыши.
+														</li>
+													</ol>
+												</div>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													on<событие>
+												</h5>
+												<p>
+													Можно назначать обработчик, используя свойство DOM-элемента
+													<span class="fw700">on<событие></span>
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-42.png" alt="">
+												</p>
+												<div>
+													<p>
+														<span class="remember">Запомнить!</span>
+														У способа <span class="fw700">on<событие></span>
+														есть недостаток - невозможность повесить несколько обработчиков
+														на одно событие.
+													</p>
+													<p>
+														Например, одна часть кода хочет при клике на кнопку делать её
+														подсвеченной, а другая – выдавать сообщение.
+													</p>
+													<p>
+														Мы хотим назначить два обработчика для этого. Но новое
+														DOM-свойство перезапишет предыдущее:
+													</p>
+													<p>
+														<img src="@img/js/module-7/image-43.png" alt="">
+													</p>
+												</div>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													addEventListener
+												</h5>
+												<p class="fw700">
+													Синтаксис добавления обработчика:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-44.png" alt="">
+												</p>
+												<ol>
+													<li>
+														<span class="fw700">event</span>
+														- Имя события, например "click".
+													</li>
+													<li>
+														<span class="fw700">handler</span>
+														- Ссылка на функцию-обработчик.
+													</li>
+													<li>
+														<span class="fw700">options</span>
+														- Дополнительный объект со свойствами:
+														<a class="tdu"
+															href="https://learn.javascript.ru/introduction-browser-events/#addeventlistener">
+															Ссылка
+														</a>
+													</li>
+												</ol>
+												<p>
+													Метод addEventListener позволяет добавлять несколько обработчиков на
+													одно событие одного элемента, например:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-45.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">
+													DOMContentLoaded
+												</h5>
+												<p>
+													DOMContentLoaded происходит, когда браузер разобрал HTML-страницу и
+													составил DOM-дерево
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-46.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-47.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">Событие input</h5>
+												<p>
+													Оно возникает каждый раз при вводе нового символа в инпут или
+													textarea.
+												</p>
+												<p>
+													Например, при каждом нажатии клавиш на клавиатуре выводится в блок
+													текущее содержимое инпута:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-48.png" alt="">
+												</p>
+												<div>
+													<input type="text" class="input input--primary js-md-7__i-1"
+														placeholder="Введите что-нибудь">
+													<div>
+														<span class="fsi">Результат:</span>
+														<span class="js-md-7__count-1"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Добавление/удаление
+											стилей</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<h5 class="font-h5">Добавление стилей</h5>
+												<p>
+													Для добавления стилей в
+													<span class="fw700">style=" "</span>
+													используется следующий синтаксис:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-49.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-50.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">Удаление стилей</h5>
+												<p>
+													<img src="@img/js/module-7/image-55.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-51.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h5 class="font-h5">Получение стилей</h5>
+												<ol class="grid-column-1">
+													<li>
+														<p>
+															Если оно записано в атрибуте
+															<span class="fw700">style</span>
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-54.png" alt="">
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-53.png" alt="">
+														</p>
+													</li>
+													<li>
+														<p>
+															Если оно записано в тегах или классах
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-56.png" alt="">
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-57.png" alt="">
+														</p>
+													</li>
+													<li>
+														<p>
+															Получение псевдоэлемента
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-58.png" alt="">
+														</p>
+														<p>
+															<img src="@img/js/module-7/image-59.png" alt="">
+														</p>
+													</li>
+												</ol>
+
+											</div>
+											<div>
+												<p>
+													<span class="remember">
+														Запомнить!
+													</span>
+													<span class="fw700">
+														getComputedStyle
+													</span>
+													требует полное свойство.
+												</p>
+												<p>
+													Для правильного получения значения нужно указать точное
+													свойство. Например: paddingLeft, marginTop, borderTopWidth. При
+													обращении к сокращённому: padding, margin, border – правильный
+													результат не гарантируется.
+												</p>
+											</div>
+											<div>
+												<span class="remember">
+													Запомнить!
+												</span>
+												<span class="fw700">
+													getComputedStyle
+												</span>
+												работает только для чтения.
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM - Глобальный объект
+											window</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Глобальный объект предоставляет переменные и функции, доступные в
+													любом месте программы. По умолчанию это те, что встроены в язык или
+													среду исполнения.
+												</p>
+												<p>
+													В браузере он называется window, в Node.js — global, в другой среде
+													исполнения может называться иначе.
+												</p>
+												<p>
+													Ко всем свойствам глобального объекта можно обращаться напрямую:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-60.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													Объекты передаются по ссылке а console, Math и т.д являются
+													объектами.
+												</p>
+												<p>
+													В данном случае во всех сравнениях находится один и тот-же объект и
+													ссылка на них.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-67.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Все значения которые есть в JavaScript находится в объекте
+													<span class="fw700">window</span>
+												</p>
+											</div>
+											<div>
+												<p>
+													Если присвоить в переменную которая ещё не создана, она будет в
+													глобальном объекте
+													<span class="fw700">window</span> как свойство.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-68.png" alt="">
+												</p>
+											</div>
+											<h4 class="font-h4">
+												Популярные свойства и методы window:
+											</h4>
+											<div>
+												<p class="fw700">
+													<span class="blue">window</span><span class="gray">.location</span>
+												</p>
+												<p>
+													Содержится информация о ссылке на текущую страницу:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-61.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-62.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p class="fw700">
+													<span class="blue">window</span><span class="gray">.</span><span
+														class="blue">navigator</span><span
+														class="gray">.userAgent</span>
+												</p>
+												<p>
+													Хранится информация о браузере пользователя.
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-63.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-64.png" alt="">
+												</p>
+											</div>
+											<div>
+												<p class="fw700">
+													<span class="blue">window</span><span
+														class="gray">.outerWidth</span>
+												</p>
+												<p class="fw700">
+													<span class="blue">window</span><span
+														class="gray">.outerHeight</span>
+												</p>
+												<p>
+													Внешняя ширина и внешняя высота
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-65.png" alt="">
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-66.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">setTimeout и
+											setInterval</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													Мы можем вызвать функцию не в данный момент, а позже, через заданный
+													интервал времени. Это называется «планирование вызова».
+												</p>
+												<div>
+													<p>
+														Для этого существуют два метода:
+													</p>
+													<ol class="grid-column-1">
+														<li>
+															<span class="fw700">setTimeout</span>
+															позволяет вызвать функцию один раз через определённый
+															интервал времени.
+														</li>
+														<li>
+															<span class="fw700">setInterval </span>
+															позволяет вызывать функцию регулярно, повторяя вызов через
+															определённый интервал времени.
+														</li>
+													</ol>
+												</div>
+											</div>
+											<div>
+												<h4 class="font-h4">
+													setTimeout
+												</h4>
+												<p>
+													Синтаксис:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-73.png" alt="">
+												</p>
+												<ol class="grid-column-1">
+													<li>
+														<span class="fw700">func|code</span>
+														<br>
+														Функция или строка кода для выполнения. Обычно это функция.
+														По историческим причинам можно передать и строку кода, но это не
+														рекомендуется.
+													</li>
+													<li>
+														<span class="fw700">delay</span>
+														<br>
+														Задержка перед запуском в миллисекундах (1000 мс = 1 с).
+														Значение по умолчанию – 0.
+													</li>
+													<li>
+														<span class="fw700">arg1, arg2…</span>
+														<br>
+														Аргументы, передаваемые в функцию (не поддерживается в IE9-)
+													</li>
+												</ol>
+												<p>
+													<img src="@img/js/module-7/image-74.png" alt="">
+												</p>
+												<p>
+													<span class="remember">Запомнить!</span>
+													Передавайте функцию, но не запускайте её
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-75.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">
+													clearTimeout
+												</h4>
+												<p>
+													Вызов setTimeout возвращает «идентификатор таймера» timerId, который
+													можно использовать для отмены дальнейшего выполнения.
+												</p>
+												<p>
+													Синтаксис для отмены:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-76.png" alt="">
+												</p>
+											</div>
+											<div>
+												<h4 class="font-h4">
+													setInterval
+												</h4>
+												<p>
+													<img src="@img/js/module-7/image-77.png" alt="">
+												</p>
+												<p>
+													Метод setInterval запускается не один раз, а периодически через
+													указанный интервал времени.
+												</p>
+												<p>
+													Следующий пример выводит сообщение каждую секунду. Через 5 секунд
+													вывод прекращается:
+												</p>
+												<p>
+													<img src="@img/js/module-7/image-78.png" alt="">
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabs__body js-module-8">
+
+							</div>
+							<div class="tabs__body js-module-9">
+
+							</div>
+							<div class="tabs__body js-module-10">
+
+							</div>
+							<div class="tabs__body js-module-11">
+
+							</div>
+							<div class="tabs__body js_2-0">
+								<ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Методы массива</button>
+										<div class="accordion-secondary__content">
+											<div>
+												<p>
+													push...
+												</p>
+											</div>
+											<div>
+												<p>
+													pop - удаляет элементы в конце массива
+												</p>
+											</div>
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Типы данных</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">if else | ?</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">логические операторы || &&</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Циклы</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Массивы</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">Функции</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+									<li class="learn-tabs__item accordion-secondary__item">
+										<button tabindex="-1" type="button" data-spoller
+											class="accordion-secondary__title btn btn-reset">DOM</button>
+										<div class="accordion-secondary__content">
+											content
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary-two__list list-reset">
+	<li class="learn-tabs__item accordion-secondary-two__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary-two__title btn btn-reset">title</button>
+		<div class="accordion-secondary-two__content">
+			content
+		</div>
+	</li>
+</ul> -->
+
+
+
+
+<!-- <ul class="table-secondary">
+	<li class="table-secondary__title">
+		<span>title1</span>
+		<span>title2</span>
+	</li>
+	<li>
+		<div>
+			<div>
+				<span>Код:</span>
+				<p>
+					img
+				</p>
+			</div>
+			<div>
+				<span>Результат:</span>
+				<p>
+					img
+				</p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<span>Код:</span>
+				<p>
+					img
+				</p>
+			</div>
+			<div>
+				<span>Результат:</span>
+				<p>
+					img
+				</p>
+			</div>
+		</div>
+	</li>
+</ul> -->
+
+
+
+<!-- <ul class="table-secondary">
+	<li class="table-secondary__title">
+		<span>Обычная запись</span>
+		<span>Сокращённая запись</span>
+	</li>
+	<li>
+		<div>
+			<p>
+				<img src="@img/js/module-6/image-13.png" alt="">
+			</p>
+		</div>
+		<div>
+			<p>
+				<img src="@img/js/module-6/image-14.png" alt="">
+			</p>
+		</div>
+	</li>
+</ul> -->
+
+
+
+
+
+
+<!-- <div>
+	<div>
+		<p>
+			descr
+		</p>
+		<p>
+			<img src="@img/js/module-$/image-$.png" alt="">
+		</p>
+	</div>
+	<div>
+		<p>
+			Результат:
+		</p>
+		<p>
+			<img src="@img/js/module-$/image-$.png" alt="">
+		</p>
+	</div>
+</div> -->

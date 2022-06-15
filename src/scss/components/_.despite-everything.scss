@@ -1,0 +1,31 @@
+.despite-everything {
+    &__elements {}
+
+    &__element {
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+
+        display: flex;
+        align-items: center;
+
+        .tooltip {
+            &__wrapper {
+                margin-right: 5px;
+            }
+
+            &__btn {
+                background-color: $darkGreen;
+                color: $white;
+                font-size: 12px;
+                line-height: 100%;
+                padding: 3px;
+                width: 125px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align-last: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Цели на 2022г."
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="goals">
+                <div class="goals__container">
+                    <h1 class="goals__title title">Цели на 2022 г.</h1>
+                    <ul data-spollers class="goals__list accordion-secondary__list list-reset">
+                        <li class="goals__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Программирование</button>
+                            <div class="accordion-secondary__content">
+                                <ul class="goals__item-elements list-reset">
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Изучить JavaScript на 85%
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Понимать React, vue, angular на хорошем уровне
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Изучить Php на 70%
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Изучить основы Python
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="goals__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Спорт</button>
+                            <div class="accordion-secondary__content">
+                                <ul class="goals__item-elements list-reset">
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        80 кг
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Пресс
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        20 подтягиваний
+                                    </li>
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        50 отжиманий
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="goals__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Саморазвитие</button>
+                            <div class="accordion-secondary__content">
+                                <ul class="goals__item-elements list-reset">
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Английский (свободно понимать каждое слово)
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="goals__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Здоровье</button>
+                            <div class="accordion-secondary__content">
+                                <ul class="goals__item-elements list-reset">
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Решить проблему со зрением (? операция)
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="goals__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Финансы</button>
+                            <div class="accordion-secondary__content">
+                                <ul class="goals__item-elements list-reset">
+                                    <li class="goals__item-element">
+                                        <span class="goals__result goals__result--not-done">Не выполнено!</span>
+                                        Устроится на востребованную работу
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение HTML/CSS/JS"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="learn">
+                <div class="learn__container">
+                    <h2 class="learn__title title">
+                        Обучение HTML/CSS/JS
+                    </h2>
+                    <div data-tabs class="tabs learn__tabs learn-tabs">
+                        <nav data-tabs-titles class="tabs__navigation">
+                            <button type="submit" class="tabs__title _tab-active">Maps</button>
+                            <button type="submit" class="tabs__title">Swiper</button>
+                            <button type="submit" class="tabs__title">Модуль 3</button>
+                        </nav>
+                        <div data-tabs-body class="tabs__content">
+                            <div class="tabs__body tabs-maps">
+                                <ul data-spollers data-one-spoller
+                                    class="learn-tabs__list accordion-secondary__list list-reset">
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Базовое подключение
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div class="learning-maps learning-maps__inner">
+                                                <div>
+                                                    <ol class="grid-column-1">
+                                                        <li>
+                                                            <a href="https://yandex.ru/dev/maps/jsapi/doc/2.1/dg/concepts/load.html"
+                                                                style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                                onmouseover="this.style.color='#df4848';"
+                                                                onmouseout="this.style.color='#367de7';"
+                                                                target="_blank">
+                                                                Подключить на сайт script:
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            Для оболочки карты в CSS указать ширину и высоту.
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://yandex.ru/map-constructor/location-tool/"
+                                                                style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                                onmouseover="this.style.color='#df4848';"
+                                                                onmouseout="this.style.color='#367de7';"
+                                                                target="_blank">
+                                                                Найти нужные координаты
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            В JS передать 2 параметра: center и zoom.
+                                                            <p>
+                                                                <img src="img/other/maps/maps-1.jpg" alt="img-1">
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div id="map-wrapper1" class="map-wrapper">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Удаление управляющих элементов.
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <a href="https://blog.maxgraph.ru/kak-skryt-vse-upravlyayushhie-elementy-s-yandeks-karty/"
+                                                    style="color: rgb(54, 125, 231); text-decoration: underline; font-size: 20px"
+                                                    onmouseover="this.style.color='#df4848';"
+                                                    onmouseout="this.style.color='#367de7';" target="_blank">
+                                                    Ссылка на статью
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-2.jpg" alt="img-2">
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/maps/maps-3.jpg" alt="img-3">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper2" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Чёрно-белая карта
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-4.jpg" alt="img-4">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper3" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Метки на карте
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-5.jpg" alt="img-5">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper4" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Своя метка на карте
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-6.jpg" alt="img-6">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper5" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Балуны для карты
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-7.jpg" alt="img-7">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper6" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Яндекс карта - Свои балуны для карты
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/maps/maps-8.jpg" alt="img-8">
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/maps/maps-9.jpg" alt="img-9">
+                                                </p>
+                                            </div>
+                                            <div id="map-wrapper7" class="map-wrapper">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabs__body tabs-swiper">
+                                <ul data-spollers data-one-spoller
+                                    class="learn-tabs__list accordion-secondary__list list-reset">
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            title
+                                        </button>
+                                        <div class="accordion-secondary__content">
+
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            title
+                                        </button>
+                                        <div class="accordion-secondary__content">
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabs__body js-module-11">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->

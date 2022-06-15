@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение Terminal"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="learn">
+                <div class="learn__container">
+                    <h2 class="learn__title title">
+                        Обучение Terminal
+                    </h2>
+                    <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Структура консольных команд</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        После имени команды можно перечислять её
+                                        входные аргументы, разделяя их пробелами
+                                        <span class="tdu">(это похоже на передачу аргументов в функцию).</span>
+                                    </p>
+                                    <p>
+                                        Например, команда <span class="fw700">echo</span> выводит на экран строку,
+                                        которую ей передали в качестве
+                                        аргумента:
+                                        <br><img src="@img/terminal/image-1.png" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Также для команд можно указывать дополнительные параметры (их называют ключами
+                                        или флагами).
+                                    </p>
+                                    <p>
+                                        Так, для команды <span class="fw700">echo</span> можно указать параметр
+                                        <span class="fw700">-n</span>, означающий, что после вывода
+                                        символов на экран курсор неперейдет на следующую строку:
+                                        <br><img src="@img/terminal/image-2.png" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Итак, команды в терминале имеют следующую структуру:
+                                        <br><img src="@img/terminal/image-3.png" alt="">
+                                    </p>
+                                    <p>
+                                        Квадратные скобки в этой записи означают, что ключи (или флаги) и входные
+                                        аргументы – необязательные
+                                        компоненты, некоторые команды могут их не поддерживать или игнорировать.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Навигация по файловой системе</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <h4 class="font-h4">Переход в другие папки</h4>
+                                    <p>
+                                        <span class="remember">
+                                            Запомнить!
+                                        </span>
+                                        <span class="fw700">cd</span> - Change Directory
+                                    </p>
+                                    <p>
+                                        Для перехода используется команда <span class="fw700">cd</span>, после которой
+                                        указывается путь к нужной папке.
+                                        <br>
+                                        Если целевая папка находится внутри текущей, то в качестве пути
+                                        достаточно указать ее имя:
+                                        <br><img src="@img/terminal/image-4.png" alt="">
+                                    </p>
+                                    <p>
+                                        <span class="remember">
+                                            Запомнить!
+                                        </span>
+                                        При вводе названий папок не обязательно писать полные имена, можно пользоваться
+                                        автодополнением – достаточно набрать несколько первых символов и нажать клавишу
+                                        <span class="fw700">Tab</span>.
+                                    </p>
+                                    <p>
+                                        <span class="remember">
+                                            Запомнить!
+                                        </span>
+                                        <span class="fw700">ls</span> - List Directories
+                                    </p>
+                                    <p>
+                                        Для просмотра содержимого папки нужно ввести команду <span
+                                            class="fw700">ls</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-h4">Переход в родительский каталог</h4>
+                                    <p>
+                                        Что-бы перейти в родительскую папку, существует команда:
+                                        <span class="fw700">cd ..</span>
+                                    </p>
+                                    <p>
+                                        Можно подниматься сразу на несколько каталогов вверх по файловой системе:
+                                        <span class="fw700">cd ../../../</span>
+                                    </p>
+                                    <p>
+                                        <span class="fw700">Знак ~ (тильда)</span> – это
+                                        псевдоним, указывающий на домашний каталог пользователя.
+                                    </p>
+                                    <p>
+                                        <span class="remember">Запомнить!</span>
+                                        С помощью команды
+                                        <span class="fw700">
+                                            cd ~
+                                        </span>
+                                        - можно с любой директории перейти в домашний каталог пользователя.
+                                        <br><img src="@img/terminal/image-5.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Текущая директория</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        Находясь в любой папке, можно узнать полный путь к ней от корневого каталога.
+                                    </p>
+                                    <p>
+                                        Для этого используется команда
+                                        <span class="fw700">
+                                            pwd
+                                        </span>
+                                        (аббревиатура от Print Working Directory)
+                                        <br><img src="@img/terminal/image-6.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Создание папок</button>
+                            <div class="accordion-secondary__content">
+                                <p>
+                                    Создавать папки в консоли можно с помощью команды
+                                    <span class="fw700">mkdir</span> (Make Directory).
+                                    <br>
+                                    В качестве аргумента этой
+                                    команде передается имя папки, которую нужно создать:
+                                    <br><img src="@img/terminal/image-7.png" alt="">
+                                </p>
+                                <p>
+                                    Можно создать сразу несколько папок, перечислив их имена друг за другом:
+                                    <br><img src="@img/terminal/image-8.png" alt="">
+                                </p>
+                                <p>
+                                    Что-бы создать вложенную папку нужно сначало убедится что родительская папка
+                                    существует:
+                                    <br><img src="@img/terminal/image-9.png" alt="">
+                                </p>
+                                <p>
+                                    У команды <span class="fw700">mkdir</span> есть ключ
+                                    <span class="fw700">-p</span>, позволяющий создавать сразу все нужные папки.
+                                    <br>
+                                    Например, следующая команда, создаст папку img, в img папку cover, а в cover
+                                    папку test:
+                                    <br><img src="@img/terminal/image-10.png" alt="">
+                                </p>
+                                <p>
+                                    Одной командой <span class="fw700">mkdir</span>
+                                    можно создавать сразу несколько разных вложенных папок,
+                                    <br>
+                                    для этого их имена нужно перечислить через запятую в фигурных скобках (пробелов
+                                    между запятыми и названиями папок быть не должно). Например:
+                                    <br><img src="@img/terminal/image-11.png" alt="">
+                                </p>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Создание файлов</button>
+                            <div class="accordion-secondary__content">
+                                <p>
+                                    Что-бы очистить командную строку существует команда
+                                    <span class="fw700">clear</span>
+                                </p>
+                                <p>
+                                    Для создания файла существует команда
+                                    <span class="fw700">touch</span>
+                                    <br><img src="@img/terminal/image-12.png" alt="">
+                                </p>
+                                <div>
+                                    <p>
+                                        Также для создания файла и записи в него информации, которую выводит какая-либо
+                                        команда, можно воспользоваться механизмом перенаправления вывода с помощью
+                                        символа
+                                        <span class="fw700">></span>.
+                                    </p>
+                                    <p>
+                                        Например, эта команда создаст файл
+                                        <span class="fw700">"kekw.txt"</span> с текстом
+                                        "Hello world, ты создал файл с данным текстом" внутри.
+                                        <br><img src="@img/terminal/image-13.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Удаление файлов и папок</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        Удалять файлы можно с помощью команды
+                                        <span class="fw700">rm</span> (Remove)
+                                        <br>
+                                        Например, следующая команда удалит файл
+                                        <span class="fw700">
+                                            test.txt
+                                        </span>
+                                        в текущем каталоге:
+                                        <br><img src="@img/terminal/image-14.png" alt="">
+                                    </p>
+                                    <p>
+                                        Можно удалять сразу несколько файлов:
+                                        <br><img src="@img/terminal/image-15.png" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Для удаления пустых папок используется команда
+                                        <span class="fw700">rmdir</span> (Remove Directory).
+                                        <br>
+                                        Например, следующая команда
+                                        удалит папку
+                                        <span class="fw700">
+                                            one
+                                        </span>
+                                        из текущего каталога (при условии, что эта папка пуста, то есть не содержит
+                                        файлов или
+                                        вложенных папок):
+                                        <br><img src="@img/terminal/image-16.png" alt="">
+                                    </p>
+                                    <p>
+                                        Удалять не пустые папки можно с помощью команды
+                                        <span class="fw700">rm</span> с ключом
+                                        <span class="fw700">-r</span> (Recursive).
+                                        <br>
+                                        Следующая команда удалит папку
+                                        <span class="fw700">
+                                            new
+                                        </span>
+                                        вместе со всем ее содержимым:
+                                        <br><img src="@img/terminal/image-17.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Копирование, перемещение и
+                                переименование файлов и папок</button>
+                            <div class="accordion-secondary__content">
+                                <p>
+                                    Для перемещения файлов и папок существует команда
+                                    <span class="fw700">mv</span> (Move).
+                                    <br>
+                                    Например: переместим файл
+                                    <span class="fw700">index.html</span>
+                                    в папку <span class="fw700">one</span>
+                                    <br><img src="@img/terminal/image-18.png" alt="">
+                                </p>
+                                <p>
+                                    Для переименования файлов и папок используется та-же команда
+                                    <span class="fw700">mv</span> (Move).
+                                    <br>
+                                    Например: переименуем файл
+                                    <span class="fw700">index.html</span>
+                                    в <span class="fw700">index-two.html</span>
+                                    <br><img src="@img/terminal/image-19.png" alt="">
+                                </p>
+                                <p>
+                                    Для копирования файлов используется команда
+                                    <span class="fw700">cp</span> (Copy Paste)
+                                    <br>
+                                    Например: скопируем файл
+                                    <span class="fw700">index.html</span>
+                                    в папку <span class="fw700">two</span>
+                                    <br><img src="@img/terminal/image-20.png" alt="">
+                                </p>
+                                <p>
+                                    Для копирования папок со всем их содержимым нужно в команде
+                                    <span class="fw700">cp</span> указывать ключ
+                                    <span class="fw700">-r</span> (Recursive)
+                                    <br>
+                                    Например: скопируем папку
+                                    <span class="fw700">one</span>
+                                    в папку <span class="fw700">two</span>
+                                    <br><img src="@img/terminal/image-21.png" alt="">
+                                </p>
+                                <p>
+                                    Что-бы переместить, копировать или удалить все файлы можно воспользоваться шаблонным
+                                    символом
+                                    <span class="fw700">"*"</span>,
+                                    <br>
+                                    Например: переместим все файлы с расширением
+                                    <span class="fw700">css</span>
+                                    в папку <span class="fw700">style</span>
+                                    <br><img src="@img/terminal/image-22.png" alt="">
+                                </p>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Исправление опечаток</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <ul class="grid-column-1">
+                                        <li>
+                                            <span class="fw700">Ctrl+A</span> – переход в начало строки.
+                                        </li>
+                                        <li>
+                                            <span class="fw700">Ctrl+E</span> – переход в конец строки.
+                                        </li>
+                                        <li>
+                                            <span class="fw700">Ctrl+U</span> – Для полной очистки содержимого командной
+                                            строки
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Поиск файлов. Документация к
+                                командам</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        С помощью команды
+                                        <span class="fw700">find</span>
+                                        можно выполнять поиск файлов по различным параметрам.
+                                    </p>
+                                    <p>
+                                        Для поиска нужных файлов нужно в команде
+                                        <span class="fw700">find</span>
+                                        указать путь к каталогу, где будет происходить поиск.
+                                    </p>
+                                    <p>
+                                        Например, следующая команда найдет все файлы в текущем каталоге
+                                        <br><img src="@img/terminal/image-23.png" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Параметры поиска указываются в команде
+                                        <span class="fw700">find</span>
+                                        с помощью дополнительных аргументов и ключей.
+                                    </p>
+                                    <p>
+                                        Например,
+                                        найти в текущем каталоге все файлы с расширением html можно так:
+                                        <br><img src="@img/terminal/image-24.png" alt="">
+                                    </p>
+                                    <p>
+                                        Буква
+                                        <span class="fw700">i</span>
+                                        в параметре
+                                        <span class="fw700">-iname</span>
+                                        означает игнорирование регистра символов при проверке соответствия имен
+                                        файлов и заданного шаблона поиска.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Команда
+                                        <span class="fw700">find</span>
+                                        позволяет фильтровать файлы по их размеру.
+                                    </p>
+                                    <p>
+                                        Например, следующая команда покажет все
+                                        файлы, размер которых превышает 15 байт:
+                                        <br><img src="@img/terminal/image-25.png" alt="">
+                                    </p>
+                                    <p>
+                                        Если нужно выделить файлы, имеющие размер меньше определенного
+                                        значения, то в ключе вместо
+                                        <span class="fw700">+</span>
+                                        нужно указать
+                                        <span class="fw700">-</span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="learn-tabs__item accordion-secondary__item">
+                            <button tabindex="-1" type="button" data-spoller
+                                class="accordion-secondary__title btn btn-reset">Экранирование пробелов</button>
+                            <div class="accordion-secondary__content">
+                                <div>
+                                    <p>
+                                        Если файл или папка состоит из нескольких слов, разделённых пробелами.
+                                        <br>
+                                        В этом случае имена файлов или папок нужно заключить в двойные кавычки.
+                                    </p>
+                                    <p>
+                                        Например, чтобы создать в текущем каталоге папку с именем
+                                        <span class="fw700">User Pictures</span>
+                                        и перейти в эту папку, нужно выполнить команды:
+                                        <br><img src="@img/terminal/image-26.png" alt="">
+                                        <br><img src="@img/terminal/image-27.png" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Второй вариант – использование символа
+                                        <span class="fw700">\</span>
+                                        для экранирования пробела (в этом случае имя заключать в
+                                        двойные кавычки не нужно).
+                                    </p>
+                                    <p>
+                                        Пробел, идущий после
+                                        <span class="fw700">\</span>,
+                                        воспринимается не как разделитель параметров
+                                        команды, а как часть имени файла или папки. Например:
+                                        <br><img src="@img/terminal/image-28.png" alt="">
+                                        <br><img src="@img/terminal/image-29.png" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->

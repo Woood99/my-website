@@ -1,0 +1,200 @@
+.learn {
+
+    &__container {}
+
+    &__title {}
+
+    &__tabs {
+        display: flex;
+
+        .tabs__navigation {
+            flex-direction: column;
+            flex: 1 1 25%;
+            background-color: $mainColor;
+            @media (max-width:$mobile){
+                display: grid;
+                grid-template-columns: repeat(2,1fr); 
+            }
+        }
+
+        .tabs__title {
+            background-color: inherit;
+            color: $whiteColor;
+            border-radius: 0;
+            border: none;
+            padding: rem(15) rem(30);
+            transition: background-color 0.3s ease-in-out 0s;
+
+            &._tab-active {
+                background-color: $mainColorHover;
+                border: none;
+                outline: none;
+            }
+        }
+
+        .tabs__content {
+            background-color: transparent;
+            flex: 1 1 100%;
+            padding: rem(10);
+             border: 1px solid $mainColor;
+             border-bottom-left-radius: rem(5);
+            border-bottom-right-radius: rem(5);
+            @media (max-width:$mobile){
+                padding: rem(10) 0;
+                border: none;
+                border-radius: 0;
+            }
+        }
+
+        .tabs__body {}
+
+       @media (max-width:$mobile){
+        flex-direction: column; 
+       }
+    }
+
+    .accordion-secondary__content {
+        img{
+            max-width: 100%;
+        }
+        > p {
+            font-size: rem(14);
+            line-height: math.div(21, 14);
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+                padding-bottom: rem(15);
+                position: relative;
+                
+               &::before{
+                   content: '';
+                   position: absolute;
+                   bottom: 0;
+                   width: 85%;
+                   height: rem(1);
+                   left: 50%;
+                   transform: translateX(-50%);
+                   background-color: $lightGrayColor;
+               }
+            }
+        }
+        > div {
+            font-size: rem(14);
+            line-height: math.div(21, 14);
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+                padding-bottom: rem(15);
+                position: relative;
+                
+               &::before{
+                   content: '';
+                   position: absolute;
+                   bottom: 0;
+                   width: 85%;
+                   height: rem(1);
+                   left: 50%;
+                   transform: translateX(-50%);
+                   background-color: $lightGrayColor;
+               }
+            }
+        }
+        div > p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        div > div {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        ol {
+            @extend %listCounter;
+            padding-left: rem(20);
+                margin-bottom: rem(10);
+            li {
+                padding-left: rem(20);
+
+                &::before {
+                    content: counter(item) '.';
+                }
+                &:not(:last-child) {
+                    margin-bottom: rem(5);
+                }
+            }
+        }
+    }
+    .accordion-secondary-two__content {
+        img{
+            max-width: 100%;
+        }
+        > p {
+            font-size: rem(14);
+            line-height: math.div(21, 14);
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+                padding-bottom: rem(15);
+                position: relative;
+                
+               &::before{
+                   content: '';
+                   position: absolute;
+                   bottom: 0;
+                   width: 85%;
+                   height: rem(1);
+                   left: 50%;
+                   transform: translateX(-50%);
+                   background-color: $lightGrayColor;
+               }
+            }
+        }
+        > div {
+            font-size: rem(14);
+            line-height: math.div(21, 14);
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+                padding-bottom: rem(15);
+                position: relative;
+                
+               &::before{
+                   content: '';
+                   position: absolute;
+                   bottom: 0;
+                   width: 85%;
+                   height: rem(1);
+                   left: 50%;
+                   transform: translateX(-50%);
+                   background-color: $lightGrayColor;
+               }
+            }
+        }
+        div > p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        div > div {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        ol {
+            @extend %listCounter;
+            padding-left: rem(20);
+                margin-bottom: rem(10);
+            li {
+                padding-left: rem(20);
+
+                &::before {
+                    content: counter(item) '.';
+                }
+                &:not(:last-child) {
+                    margin-bottom: rem(5);
+                }
+            }
+        }
+    }
+}

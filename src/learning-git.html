@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Обучение Git"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="learn">
+				<div class="learn__container">
+					<h2 class="learn__title title">
+						Обучение Git
+					</h2>
+					<ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Введение</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										<span class="fw700">Git</span>
+										– популярная система для хранения программного кода,
+										(система контроля версий)
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="remember">Запомнить!</span>
+										<span class="fw700">Система контроля версий (CVS - Control Version
+											System)</span>
+										- позволняет
+										вернуться к определённой версии файла
+										или определить, кем и когда были сделаны изменения в файле.
+									</p>
+									<p>
+										<span class="remember">Запомнить!</span>
+										<span class="fw700">Репозиторий Git</span>
+										– хранилище для истории разработки проекта, которое
+										содержит все версии
+										используемых файлов.
+									</p>
+									<p>
+										<span class="remember">Запомнить!</span>
+										<span class="fw700">Коммит (commit)</span>
+										- фиксация состояния проекта в репозитории Git
+									</p>
+									<p>
+										<span class="remember">Запомнить!</span>
+										<span class="fw700">Индекс</span>
+										– список файлов, изменения в которых система Git
+										отслеживает. В индексе также
+										предварительно сохраняются все изменённые файлы, которые будут
+										зафиксированы в репозитории
+										при следующем коммите
+									</p>
+									<p>
+										<span class="remember">Запомнить!</span>
+										<span class="fw700">Ветка</span>
+										– изолированный независимый поток разработки, в котором
+										можно делать коммиты,
+										недоступные для других веток
+									</p>
+								</div>
+								<div>
+									<p class="fw700">
+										Основные возможности git:
+									</p>
+									<ol>
+										<li>
+											Добавлять новый функционал.
+										</li>
+										<li>
+											Исправлять ошибки.
+										</li>
+										<li>
+											Работать в команде.
+										</li>
+									</ol>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Установка Git</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										Первым делом нужно указать своё
+										<span class="fw700">имя и адрес электронной почты.</span>
+									</p>
+									<p>
+										Эту информацию Git будет включать во все создаваемые
+										коммиты и именно по этим реквизитам
+										устанавливается авторство изменений в общем репозитории.
+									</p>
+									<p>
+										Имя и адрес электронной почты удобнее
+										сохранить в глобальные переменные с помощью следующих команд:
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git config --global user.name "Sergey Stryuchkov"
+										</span>
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git config --global user.email "serega.stryuchkov@gmail.com"
+										</span>
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git config --list
+										</span>
+										- все установленные параметры Git
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git init
+										</span>
+										- инициализирует систему Git для текущей папки и создаст в ней новый пустой
+										репозиторий.
+									</p>
+									<p>
+										В результате в текущей папке будет создан каталог .git,
+										в котором будут находиться все необходимые для git файлы.
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Добавление файлов в индекс</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git status
+										</span>
+										- статус файлов
+										которые были добавлены, изменены, удалены...
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git add (имя файла)
+										</span>
+										- добавляет файл в индекс, что-бы git следил за ним.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git add .
+										</span>
+										- добавляет все файлы внутри текущей директории в индекс, что-бы git следил за
+										ним.
+									</p>
+								</div>
+								<div>
+									<p>
+										<img src="@img/git/image-1.jpg" alt="">
+									</p>
+									<div>
+										<ul class="grid-column-1">
+											<li>
+												<span class="fw700 color-red">***</span>
+												Файлы, находящиеся в индексе Git и готовые к включению в коммит.
+											</li>
+											<li>
+												<span class="fw700 color-red">*** ***</span>
+												Файлы, за которыми Git следит, но информация об их изменениях не будет
+												добавлена в коммит, так
+												как последние версии этих файлов еще не добавлены в индекс.
+											</li>
+											<li>
+												<span class="fw700 color-red">*** *** ***</span>
+												Файлы, за изменениями которых Git не следит.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Создание коммита</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git commit
+										</span>
+										- создаёт коммит. => откроется окно и нужно придумать ему имя.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git commit -m 'name'
+										</span>
+										- создаёт коммит. При этом имя указывается сразу.
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git log
+										</span>
+										- История коммитов.
+									</p>
+									<p>
+										<img src="@img/git/image-2.jpg" alt="">
+									</p>
+									<ol class="grid-column-1">
+										<li>
+											<span class="color-red fw700">commit 3dd34dfd80b...</span>
+											- хеш коммита (уникальный идентификатор коммита)
+										</li>
+										<li>
+											<span class="color-red fw700">(HEAD -> master)</span>
+											- в какой ветке был совершён коммит
+										</li>
+										<li>
+											<span class="color-red fw700">Author</span>
+											- кем был совершён коммит
+										</li>
+										<li>
+											<span class="color-red fw700">Date</span>
+											- когда был совершён коммит
+										</li>
+										<li>
+											<span class="color-red fw700">Первый тестовый коммит:</span>
+											- сообщение коммита
+										</li>
+									</ol>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git log --oneline
+										</span>
+										- git log в компактном варианте.
+									</p>
+									<p>
+										<img src="@img/git/image-3.jpg" alt="">
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git diff 'id'
+										</span>
+										- показывает изменения в коммите.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git diff
+										</span>
+										- показывает изменения в текущем коммите.
+									</p>
+									<p>
+										<img src="@img/git/image-4.jpg" alt="">
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Навигация по коммитам. Отмена
+								изменений</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<h5 class="font-h5">
+										git-проект состоит из:
+									</h5>
+									<p>
+										<span class="code-bg_light-blue">
+											Рабочий каталог
+										</span>
+										- текущие файлы над которыми введётся работа.
+										Если создать или изменить файл, он сохранится в рабочем каталоге.
+										Рабочий каталог не
+										имеет отношения к папке .git.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											Индекс
+										</span>
+										- находится в папке .git и содержит
+										информацию о том, какие файлы и в каком состоянии будут зафиксированы
+										при следующем коммите.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											HEAD
+										</span>
+										- указатель, который обычно указывает на последний комит в ветке.
+									</p>
+								</div>
+								<div>
+									<p>
+										Обработка файлов в Git происходит следующим образом:
+									</p>
+									<ol class="grid-column-1">
+										<li>
+											Мы редактируем файл в рабочем каталоге. У такого файла будет состояние
+											"Изменен" (modified).
+										</li>
+										<li>
+											Индексируем изменённый файл, добавляя его в индекс командой git add. Статус
+											такого файла –
+											"Индексирован" (staged)
+										</li>
+										<li>
+											Сохраняем изменения в репозитории, выполняя коммит с помощью git commit.
+											Статус такого файла –
+											"Зафиксирован" (fixed).
+										</li>
+									</ol>
+								</div>
+								<div>
+									<h4 class="font-h4">
+										Отменение изменений
+									</h4>
+									<p>
+										<span class="code-bg_light-blue">
+											git reset --soft/--hard
+										</span>
+										- Откатиться к нужному коммиту.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git reset --soft 'id'
+										</span>
+										- переместит указатель HEAD на нужный коммит,
+										при этом изменения которые произошли после коммита
+										к которому хотим перейти останутся.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git reset --hard 'id'
+										</span>
+										- удаляет файлы и полностью возращает состояние
+										проекта к текущему коммиту к которому мы хотим откатится).
+									</p>
+									<p>
+										<span class="remember">Запомнить!</span>
+										Не обязательно копировать полностью идентификатор (будет достаточно 7 символов
+										или больше)
+									</p>
+								</div>
+								<div>
+									<h4 class="font-h4">git reset --soft</h4>
+									<ol class="grid-column-1">
+										<li>
+											Откатимся к нужному коммиту. Теперь HEAD переместился на этот коммит.
+										</li>
+										<li>
+											Произведём изменения.
+										</li>
+										<li>
+											Добавим все файлы в индекс и создадим коммит. (git add . => git commit)
+										</li>
+									</ol>
+									<h5 class="font-h5">
+										Можно откатить файл или группу файлов к коммиту которому перешли.
+									</h5>
+									<ol class="grid-column-1">
+										<li>
+											git reset --soft
+										</li>
+										<li>
+											git reset HEAD 'название файла'.
+											Теперь этот файл имеет статус unstage (git за ним не отслеживает)
+										</li>
+										<li>
+											git checkout -- 'имя файла'. Полностью откатывает измненеия до текущего
+											коммита.
+										</li>
+										<li>
+											Добавим все файлы в индекс и создадим коммит. (git add . => git commit)
+										</li>
+									</ol>
+								</div>
+								<div>
+									<h4 class="font-h4">git reset --hard</h4>
+									<ol class="grid-column-1">
+										<li>
+											Откатимся к нужному коммиту.
+											<br>
+											Теперь изменения которые состоялись после коммита к которому откатились -
+											удалены
+											и восстановить их нельзя.
+										</li>
+									</ol>
+									<p>
+										<span class="remember">Запомнить!</span>
+										git reset --hard использовать в очень крайних случаях.
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Цикл работы с Git</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										<span class="fw700">
+											code 'имя файла'
+										</span>
+										- Открывает файл с помощью редактора кода
+									</p>
+								</div>
+								<div>
+									<p>
+										Комментарий к коммиту может быть как лаконичным, состоящим из одной строки, так
+										и развернутым.
+										<br>
+										Если в
+										комментарии необходимо написать несколько строк, то принято на первой строке
+										помещать короткий
+										заголовок из одной фразы, а остальной комментарий записывать после одной пустой
+										строки.
+									</p>
+									<p>
+										Например:
+									</p>
+									<p>
+										<img src="@img/git/image-5.jpg" alt="">
+									</p>
+									<p>
+										Что-бы выйти нажмём Esc и пропишем
+										<span class="fw700">:wq</span>
+										(Записать и выйти)
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">Ветвления в Git</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git branch
+										</span>
+										- Проверить какие ветки есть в проекте.
+									</p>
+									<p>
+										Новый функционал разрабатывают в новых ветках,
+										изолированно от основной ветки проекта. 
+										Когда все нужные изменения сделаны, функционал
+										полностью готов и протестирован, 
+										ветка объединяется (сливается) с основной.
+									</p>
+									<p>
+										Имя для ветки нужно выбирать осмысленно, 
+										чтобы было понятно ее назначение (реализация нового
+										функционала или исправление выявленных ошибок).
+										Например: feature-cart (корзина) 
+									</p>
+									<p>
+										Все ветки существуют параллельно друг другу, разработка в них ведётся независимо
+									</p>
+								</div>
+								<div>
+									<h4 class="font-h4">Создание и переключение веток</h4>
+									<p>
+										<span class="code-bg_light-blue">
+											git checkout -b 'имя_ветки'
+										</span>
+										- Создаёт новую ветку и сразу переходит в неё.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git checkout 'имя_ветки'
+										</span>
+										- Переключение между ветками.
+									</p>
+								</div>
+								<div>
+									<h4 class="font-h4">Слияние веток</h4>
+									<p>
+										Например вся работа в новой ветке выполнена.
+										Теперь эту ветку нужно слить с основной. 
+									</p>
+									<p>
+										Для этого нужно переключится в ветку, в которую надо добавить изменения (master).
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git merge 'имя_ветки'
+										</span>
+										- Слияние веток.
+									</p>
+								</div>
+								<div>
+									<h4 class="font-h4">Удаление веток</h4>
+									<p>
+										После того, как произошло слияние двух веток, 
+										вторая ветка больше не нужна.
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git branch -d 'имя_ветки'
+										</span>
+										- Удаление ветки (d - delete)
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">
+								Конфликты при слиянии веток
+							</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										Если изменения в ветках затрагивали разные строки одного файла, то скорее всего
+										Git сможет слить эти файлы без ошибок.
+									</p>
+									<p>
+										Но если изменения в разных ветках
+										затрагивают одни и те же
+										строки в файле – в этом случае возникнет конфликт слияния.
+									</p>
+								</div>
+								<div>
+									<ol class="grid-column-1">
+										<li>
+											Создадим новую ветку bug-cart
+											<span class="fw700">
+												(git checkout -b 'bug-cart)
+											</span>
+										</li>
+										<li>
+											Допустим мы изменили файл
+											<span class="fw700">cart.html</span>
+											сразу в двух ветках,
+											и добавили эти изменения в коммит в разных ветках
+											<span class="fw700">(git add . => git commit -m)</span>
+										</li>
+										<li>
+											Перейдём в основную ветку
+											<span class="fw700">(git checkout master)</span>
+										</li>
+										<li>
+											Объединим ветки с помощью
+											<span class="fw700">git merge bug-cart</span>
+										</li>
+										<li>
+											Получим ошибку, в
+											<span>git status</span>
+											смотрим где произошла ошибка.
+											<br>
+											В <span class="fw700">git diff</span>
+											можно посмотреть подробно о ошибке.
+										</li>
+										<li>
+											<p>
+												Заходим в файл где ошибка:
+											</p>
+											<p>
+												<img src="@img/git/image-6.jpg" alt="">
+											</p>
+										</li>
+										<li>
+											<p>
+												И выбираем что нужно оставить, в данном случае нужно оставить то,
+												что было добавлено в ветке bug-cart:
+											</p>
+											<p>
+												<img src="@img/git/image-7.jpg" alt="">
+											</p>
+										</li>
+										<li>
+											Создаём новый коммит
+											<span class="fw700">(git add. => git commit -m)</span>
+										</li>
+										<li>
+											Теперь если нужно, можем удалить ветку bug-cart
+											<span class="fw700">(git branch -d bug-cart)</span>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">
+								Временное (без коммита) сохранение данных
+							</button>
+							<div class="accordion-secondary__content">
+								<div>
+									<p>
+										Иногда возникает необходимость оперативно переключиться в другую ветку,
+										но в текущей рабочей ветке файлы еще не готовы для
+										коммита. В этом случае Git позволяет сохранить сделанные изменения, не создавая
+										при этом коммит.
+									</p>
+								</div>
+								<div>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash
+										</span>
+										- Собирает незакоммиченные изменения,
+										удаляет их из файлов и в специальном виде архивирует
+										их в Git (помещает в стек незавершенных изменений).
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash list
+										</span>
+										- Посмотреть что находится в stash
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash apply
+										</span>
+										- Добавит последний добавленный stash
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash apply stash@{0}
+										</span>
+										- Добавит конкретный stash
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash pop
+										</span>
+										- Добавит последний stash и сразу удалит из списка stash
+									</p>
+									<p>
+										<span class="code-bg_light-blue">
+											git stash drop stash@{0}
+										</span>
+										- Удалит запись из stash
+									</p>
+								</div>
+								<div>
+									<p>
+										Например, в ветке bug-cart что-то разрабатывается,
+										и срочно нужно что-то поменять в другой ветке:
+									</p>
+									<ol class="grid-column-1">
+										<li>
+											Выполняем команду
+											<span class="fw700">git stash</span>
+										</li>
+										<li>
+											Переключаемся к нужной ветке, делам работу которую требуют.
+											(добавляем в индекс, в коммит...)
+										</li>
+										<li>
+											Возращаемся назад к ветке где архивировали файлы (git stash)
+										</li>
+										<li>
+											Добавляем stash
+										</li>
+										<li>
+											Удаляем этот stash из списка
+										</li>
+									</ol>
+								</div>
+							</div>
+						</li>
+						<li class="learn-tabs__item accordion-secondary__item">
+							<button tabindex="-1" type="button" data-spoller
+								class="accordion-secondary__title btn btn-reset">
+								Работа с удалёнными репозиториями
+							</button>
+							<div class="accordion-secondary__content">
+								<h4 class="font-h4">GitHub</h4>
+								<div>
+									<ol class="grid-column-1">
+										<li>
+											Создание нового репозитория на GitHub
+										</li>
+										<li>
+											Загрузка локального репозитория на GitHub
+											<p>
+												Чтобы загрузить локальный репозиторий на GitHub, нужно
+												сообщить Git'у адрес нужного
+												нам удалённого репозитория
+											</p>
+											<p class="fw700">
+												git remote add origin ...{link}
+											</p>
+											<p>
+												<span class="fw700">origin</span>
+												- имя (может быть любым)
+												У одного проекта может быть несколько удалённых репозиториев
+												под разными именами (разные
+												стадии проекта могут заливаться на разные ресурсы).
+											</p>
+										</li>
+										<li>
+											git push
+											<p>
+												<span class="fw700">
+													git push удалённый_репозиторий ветка
+												</span>
+												- для выгрузки содержимого локального репозитория в удаленный
+												репозиторий. Она позволяет передать коммиты из локального репозитория в
+												удаленный.
+											</p>
+											<p>
+												Ключ -u (upstream) здесь указывает на то, что мы заливаем на сервер ту
+												ветку (master), которой там ещё нет.
+												Во время выполнения команды GitHub запрашивал учетные данные (имя и
+												пароль) для доступа к
+												репозиторию.
+											</p>
+											<p class="fw700">
+												git push -u origin master
+											</p>
+										</li>
+									</ol>
+								</div>
+								<div>
+									<p>
+										Обязательные файлы на GitHub
+									</p>
+									<ol class="grid-column-1">
+										<li>
+											<span class="fw700">.gitignore</span>
+											содержит список файлов и каталогов, за
+											которыми Git не должен следить
+											и которые не будут сохраняться в репозитории.
+										</li>
+										<li>
+											<span class="fw700">readme.md</span>
+											- описанием проекта.
+										</li>
+									</ol>
+								</div>
+								<div>
+									<span class="remember">Запомнить!</span>
+									Пустые папки Git игнорирует.
+								</div>
+								<div>
+									<h4 class="font-h4">
+										Клонирование репозитория с GitHub на локальный компьютер
+									</h4>
+									<ol class="grid-column-1">
+										<li>
+											В GitHub копируем ссылку репозитория (code --> HTTPS)
+										</li>
+										<li>
+											<span class="fw700">git clone {link}</span>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
+
+
+
+<!-- <ul data-spollers data-one-spoller class="learn-tabs__list accordion-secondary__list list-reset">
+	<li class="learn-tabs__item accordion-secondary__item">
+		<button tabindex="-1" type="button" data-spoller
+			class="accordion-secondary__title btn btn-reset">title</button>
+		<div class="accordion-secondary__content">
+			content
+		</div>
+	</li>
+</ul> -->
+
+
+
+
+<!-- <ul class="table-secondary">
+	<li class="table-secondary__title">
+		<span>title1</span>
+		<span>title2</span>
+	</li>
+	<li>
+		<div>
+			<div>
+				<span>Код:</span>
+				<p>
+					img
+				</p>
+			</div>
+			<div>
+				<span>Результат:</span>
+				<p>
+					img
+				</p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<span>Код:</span>
+				<p>
+					img
+				</p>
+			</div>
+			<div>
+				<span>Результат:</span>
+				<p>
+					img
+				</p>
+			</div>
+		</div>
+	</li>
+</ul> -->
