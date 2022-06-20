@@ -183,3 +183,33 @@ if (document.querySelector('#map-wrapper7')) {
     }
     ymaps.ready(init);
 }
+
+
+
+
+
+
+
+
+if (document.querySelector('#tabs-video-js-1')) {
+    videojs(document.querySelector('#tabs-video-js-1'), {
+        language: 'ru',
+    });
+}
+
+
+
+if (document.querySelector('#tabs-video-js-2')) {
+    videojs(document.querySelector('#tabs-video-js-2'));
+}
+
+if (document.querySelector('#tabs-video-js-3')) {
+    videojs(document.querySelector('#tabs-video-js-3'));
+}
+
+
+if (document.querySelector('#tabs-video-js-4')) {
+    videojs(document.querySelector('#tabs-video-js-4'));
+}
+
+

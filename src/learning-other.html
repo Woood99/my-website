@@ -18,6 +18,7 @@
                             <button type="submit" class="tabs__title _tab-active">Maps</button>
                             <button type="submit" class="tabs__title">Swiper</button>
                             <button type="submit" class="tabs__title">Оптимизация скорости загрузки сайта</button>
+                            <button type="submit" class="tabs__title">video</button>
                         </nav>
                         <div data-tabs-body class="tabs__content">
                             <div class="tabs__body tabs-maps">
@@ -223,6 +224,221 @@
                                                     Сжатие CSS, JS.
                                                 </li>
                                             </ol>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabs__body tabs-video">
+                                <ul data-spollers data-one-spoller
+                                    class="learn-tabs__list accordion-secondary__list list-reset">
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Подключение видео / тег
+                                            video</button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <video controls preload="metadata" width="400" height="200"
+                                                    poster="img/other/video/poster.jpg">
+                                                    <source src="img/other/video/trailer.mp4" type="video/mp4">
+                                                </video>
+                                                <p>
+                                                    <img src="img/other/video/image-1.jpg" alt="img-1">
+                                                </p>
+                                                <ul class="grid-column-1">
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            preload
+                                                        </span>
+                                                        Используется для загрузки видео вместе с загрузкой веб-страницы.
+                                                        Этот атрибут игнорируется, если установлен autoplay.
+                                                        <br>
+                                                        <span class="fw700">auto</span> - Загрузить видео целиком при
+                                                        загрузке страницы.
+                                                        <br><span class="fw700">metadata</span> - Загрузить только
+                                                        служебную информацию (размеры видео, первый кадр,
+                                                        продолжительность и др.).
+                                                        <br><span class="fw700">none</span> - Не загружать видео.
+                                                    </li>
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            type
+                                                        </span>
+                                                        тип (обязательно)
+                                                    </li>
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            controls
+                                                        </span>
+                                                        Добавляет панель управления к видеоролику.
+                                                    </li>
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            poster
+                                                        </span>
+                                                        Указывает адрес картинки, которая будет отображаться, пока видео
+                                                        не доступно или не воспроизводится.
+                                                    </li>
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            autoplay
+                                                        </span>
+                                                        Видео начинает воспроизводиться автоматически после загрузки
+                                                        страницы.
+                                                        При этом видео нужно замутить (muted)
+                                                    </li>
+                                                    <li>
+                                                        <span class="code-bg_light-blue">
+                                                            loop
+                                                        </span>
+                                                        Повторяет воспроизведение видео с начала после его завершения.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Видео на фоне</button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/video/image-2.jpg" alt="img-2">
+                                                </p>
+                                                <p>
+                                                    <span class="remember">
+                                                        Запомнить!
+                                                    </span>
+                                                    На iphone могут быть проблемы, что-бы их исправить нужно указать
+                                                    атрибут
+                                                    playsiline.
+                                                </p>
+                                            </div>
+                                            <div class="tabs-video-section">
+                                                <h2 class="tabs-video-section__title">
+                                                    Заголовок
+                                                </h2>
+                                                <video src="img/other/video/trailer.mp4" playsiline muted autoplay loop
+                                                    class="tabs-video-section__video">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Свой плеер для видео.
+                                            video.js (стандартный)</button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    <img src="img/other/video/image-3.jpg" alt="img-3">
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/video/image-4.jpg" alt="img-4">
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <video width="600" controls class="video-js" id="tabs-video-js-1">
+                                                    <source src="img/other/video/trailer.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Так-же для доступности необходими подключить русский язык, по
+                                                    стандарту английский.
+                                                </p>
+
+                                                <p>
+                                                    <a href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.1/lang/ru.min.js"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;">Ссылка</a>
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/video/image-6.jpg" alt="img-6">
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/video/image-7.jpg" alt="img-7">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Свой плеер для видео.
+                                            video.js (темы)
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    Для этого нужно на сайте video.js
+                                                    в разделе "темы" найти ссылку на
+                                                    <a href="https://github.com/videojs/themes"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;">github</a>
+                                                    и подключить стили.
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/video/image-5.jpg" alt="img-5">
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <video width="600" controls class="video-js vjs-theme-fantasy"
+                                                    id="tabs-video-js-2">
+                                                    <source src="img/other/video/trailer.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Свой плеер для видео.
+                                            video.js (свои стили)</button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    Стили можно менять, важно менять тот-же селектор и сохранять
+                                                    спецефичность
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <video width="600" controls class="video-js" id="tabs-video-js-3">
+                                                    <source src="img/other/video/trailer.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Видео с ютуба</button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <p>
+                                                    Для этого нужна библиотека videojs-youtube
+                                                </p>
+                                                <p>
+                                                    <img src="img/other/video/image-8.jpg" alt="img-8">
+                                                </p>
+                                            </div>
+
+                                            <video width="600" controls class="video-js" id="tabs-video-js-4"   
+                                            data-setup='
+                                            { 
+                                                "techOrder": ["youtube"], 
+                                                "sources": [{ 
+                                                    "type": "video/youtube", 
+                                                    "src": "https://www.youtube.com/watch?v=k3p3W3u1rT8"
+                                                }] 
+                                            }
+                                            '>
+                                            </video>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">Видео на фоне</button>
+                                        <div class="accordion-secondary__content">
+
                                         </div>
                                     </li>
                                 </ul>
