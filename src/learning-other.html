@@ -186,19 +186,445 @@
                                     <li class="learn-tabs__item accordion-secondary__item">
                                         <button tabindex="-1" type="button" data-spoller
                                             class="accordion-secondary__title btn btn-reset">
-                                            title
+                                            Базовые параметры
                                         </button>
                                         <div class="accordion-secondary__content">
-
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    slidesPerView
+                                                </span>
+                                                <p>
+                                                    Количество слайдов
+                                                </p>
+                                                <p>
+                                                    1 - 1 слайд
+                                                </p>
+                                                <p>
+                                                    1.2 - 1 слайд, и следующий выглядывает на 2/10
+                                                </p>
+                                                <p>
+                                                    auto - слайды подстраиваються под контент, при этом карточке нужно
+                                                    добавить width: auto;
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    slidesPerGroup
+                                                </span>
+                                                <p>
+                                                    Группировка слайдов
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    spaceBetween
+                                                </span>
+                                                <p>
+                                                    Расстояние между слайдами
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    loop: true,
+                                                </span>
+                                                <p>
+                                                    Зациклить слайдер
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    slideToClickedSlide: true
+                                                </span>
+                                                <p>
+                                                    При клике на слайд переключаться
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="code-bg_light-blue">
+                                                    centeredSlides: true
+                                                </span>
+                                                <p>
+                                                    Главный слайд по центру
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="remember">Запомнить!</span>
+                                                Если нужно изменить ширину слайдов, нужно менять ширину контейнера
+                                            </div>
+                                            <div>
+                                                <span class="remember">Запомнить!</span>
+                                                Если нужно вынести кнопки то padding нужно указать для контейнера
+                                            </div>
+                                            <div>
+                                                <span class="remember">Запомнить!</span>
+                                                Если нужно отключить свайпинг, к контейнеру добавить class
+                                                swiper-no-swiping
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="learn-tabs__item accordion-secondary__item">
                                         <button tabindex="-1" type="button" data-spoller
                                             class="accordion-secondary__title btn btn-reset">
-                                            title
+                                            Слайдер с увеличенным слайдом в центре
                                         </button>
                                         <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    Добавить параметр centeredSlides: true,
+                                                </li>
+                                                <li>
+                                                    Для всех слайдов добавить transition
+                                                </li>
+                                                <li>
+                                                    В CSS активному слайду добавить transform: scale, и transition
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/centered-slide-up"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/centered-slide-up/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/centered-slide-up/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Три выделенных слайда в центре
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    Слайдам задать opacity 0.5
+                                                </li>
+                                                <li>
+                                                    slide-next/prev указать opacity 1
+                                                </li>
+                                                <li>
+                                                    Контейнеру задать overflow: initial;
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/three-slides-centered"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/three-slides-centered/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/three-slides-centered/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Lazy load
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    Картинке вместо src добавить data-src="путь", и добавить
+                                                    class="swiper-lazy""
+                                                </li>
+                                                <li>
+                                                    Что-бы не ругался валидатор src="#"
+                                                </li>
+                                                <li>
+                                                    После картинке добавить div class="swiper-lazy-preloader
+                                                    swiper-lazy-preloader-white"
+                                                </li>
+                                                <li>
+                                                    Добавить параметр в js: lazy: true,
+                                                </li>
+                                                <li>
+                                                    Параметр loadPrevNext - загружает слайдеры по бокам заранее
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/lazy-slider"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/lazy-slider/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/lazy-slider/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Вертикальный слайдер с превью
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    <p>
+                                                        <a href="https://www.youtube.com/watch?v=OjVK055CTNI&t=2244s"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            YouTube
+                                                        </a>
+                                                    </p>
 
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/vertical-thumb"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/vertical-thumb/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/vertical-thumb/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Методы и события
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/metods"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/metods/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/metods/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            Несколько слайдеров на странице.
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <div>
+                                                <h4 class="font-h4">
+                                                   Разные классы
+                                                </h4>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/different-class"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        Ссылка
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/different-class/style.css"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        CSS
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/different-class/slider.js"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        JavaScript
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-h4">
+                                                    Одинаковые классы
+                                                </h4>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/same-class"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        Ссылка
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/same-class/style.css"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        CSS
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://sergeyst02-blog.tk/learning/swiper/multiple-sliders/same-class/slider.js"
+                                                        style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                        onmouseover="this.style.color='#df4848';"
+                                                        onmouseout="this.style.color='#367de7';" target="_blank">
+                                                        JavaScript
+                                                    </a>
+                                                </p>
+                                            </div>
+                                       
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                            На фоне
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/bg-slider"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/bg-slider/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/bg-slider/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </li>
+                                    <li class="learn-tabs__item accordion-secondary__item">
+                                        <button tabindex="-1" type="button" data-spoller
+                                            class="accordion-secondary__title btn btn-reset">
+                                          Превращение в слайдер на моб. устройствах
+                                        </button>
+                                        <div class="accordion-secondary__content">
+                                            <ol class="grid-column-1">
+                                                <li>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/slider-to-mobile"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            Ссылка
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/slider-to-mobile/style.css"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            CSS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <a href="https://sergeyst02-blog.tk/learning/swiper/slider-to-mobile/slider.js"
+                                                            style="color: rgb(54, 125, 231); text-decoration: underline;"
+                                                            onmouseover="this.style.color='#df4848';"
+                                                            onmouseout="this.style.color='#367de7';" target="_blank">
+                                                            JavaScript
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ol>
                                         </div>
                                     </li>
                                 </ul>
@@ -418,8 +844,8 @@
                                                 </p>
                                             </div>
 
-                                            <video width="600" controls class="video-js" id="tabs-video-js-4"   
-                                            data-setup='
+                                            <video width="600" controls class="video-js" id="tabs-video-js-4"
+                                                data-setup='
                                             { 
                                                 "techOrder": ["youtube"], 
                                                 "sources": [{ 
